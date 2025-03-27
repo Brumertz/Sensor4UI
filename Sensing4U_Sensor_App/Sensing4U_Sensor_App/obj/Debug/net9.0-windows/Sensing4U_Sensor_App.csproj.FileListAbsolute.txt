@@ -1,0 +1,6 @@
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\Sensing4U_Sensor_App.csproj.AssemblyReference.cache
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\Sensing4U_Sensor_App_MarkupCompile.cache
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensing4U_Sensor_App\Sensing4U_Sensor_App\obj\Debug\net9.0-windows\Sensing4U_Sensor_App_MarkupCompile.lref
