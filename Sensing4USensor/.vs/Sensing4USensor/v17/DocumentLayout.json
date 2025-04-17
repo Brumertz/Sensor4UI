@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|c:\\users\\brumertztafe\\desktop\\sensing4u sensor management mvp\\sensor4ui\\sensing4usensor\\sensing4usensor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|solutionrelative:sensing4usensor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|c:\\users\\brumertztafe\\desktop\\sensing4u sensor management mvp\\sensor4ui\\sensing4usensor\\sensing4usensor\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|solutionrelative:sensing4usensor\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|c:\\users\\brumertztafe\\desktop\\sensing4u sensor management mvp\\sensor4ui\\sensing4usensor\\sensing4usensor\\utils\\sensorcolorclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|solutionrelative:sensing4usensor\\utils\\sensorcolorclassifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\sensing4usensor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|solutionrelative:sensing4usensor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|c:\\users\\brumertztafe\\desktop\\sensing4u sensor management mvp\\sensor4ui\\sensing4usensor\\sensing4usensor\\utils\\sensorfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{228FCECD-E977-47EB-8498-27B1F504065D}|Sensing4USensor\\Sensing4USensor.csproj|solutionrelative:sensing4usensor\\utils\\sensorfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SensorFileManager.cs",
+              "DocumentMoniker": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Utils\\SensorFileManager.cs",
+              "RelativeDocumentMoniker": "Sensing4USensor\\Utils\\SensorFileManager.cs",
+              "ToolTip": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Utils\\SensorFileManager.cs",
+              "RelativeToolTip": "Sensing4USensor\\Utils\\SensorFileManager.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T01:35:18.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.cs",
+              "RelativeDocumentMoniker": "Sensing4USensor\\Form1.cs",
+              "ToolTip": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.cs",
+              "RelativeToolTip": "Sensing4USensor\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:52:09.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Sensing4USensor\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.Designer.cs",
+              "RelativeToolTip": "Sensing4USensor\\Form1.Designer.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAYwBsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:52:02.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SensorColorClassifier.cs",
+              "DocumentMoniker": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Utils\\SensorColorClassifier.cs",
+              "RelativeDocumentMoniker": "Sensing4USensor\\Utils\\SensorColorClassifier.cs",
+              "ToolTip": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Utils\\SensorColorClassifier.cs",
+              "RelativeToolTip": "Sensing4USensor\\Utils\\SensorColorClassifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:24:50.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.cs",
+              "RelativeDocumentMoniker": "Sensing4USensor\\Form1.cs",
+              "ToolTip": "C:\\Users\\BrumertzTafe\\Desktop\\Sensing4U Sensor Management MVP\\Sensor4UI\\Sensing4USensor\\Sensing4USensor\\Form1.cs [Design]",
+              "RelativeToolTip": "Sensing4USensor\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T00:50:49.361Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
