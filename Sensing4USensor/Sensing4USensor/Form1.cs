@@ -179,13 +179,12 @@ namespace Sensing4USensor
             int days = current.GetLength(0);
             int hours = current.GetLength(1);
 
-            // Clear grid to rebuild sorted
             dgvSensorData.Rows.Clear();
 
             List<DataGridViewRow> matchedRows = new();
             List<DataGridViewRow> nonMatchedRows = new();
 
-            DateTime startDate = new DateTime(2025, 3, 12); // Replace with your actual start date logic
+            DateTime startDate = new DateTime(2025, 3, 12); // Adjust if dynamic
 
             for (int d = 0; d < days; d++)
             {
@@ -193,27 +192,21 @@ namespace Sensing4USensor
                 row.CreateCells(dgvSensorData);
 
                 DateTime date = startDate.AddDays(d);
-                row.Cells[0].Value = date.ToString("dd/MM/yyyy");
+                string dateString = date.ToString("dd/MM/yyyy");
+                row.Cells[0].Value = dateString;
 
-                bool isMatch = false;
+                bool isMatch = dateString.ToLower().Contains(search) ||
+                               date.ToString("yyyy-MM-dd").Contains(search) || // ISO style
+                               date.ToString("d").ToLower().Contains(search);   // Short date
 
                 for (int h = 0; h < hours; h++)
                 {
                     var item = current[d, h];
                     item.ColorCategory = SensorColorClassifier.GetColor(item.Value, lowerBound, upperBound);
-
                     row.Cells[h + 1].Value = item.Value.ToString("F2");
 
-                                      // Check if this row matches the search
-                    if (item.SensorType.ToLower().Contains(search) ||
-                        item.Value.ToString().ToLower().Contains(search) ||
-                        item.ColorCategory.ToString().ToLower().Contains(search))
-                    {
-                        isMatch = true;
-                    }
                 }
 
-                // Highlight full row if match, and sort it into the right list
                 if (isMatch)
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
@@ -226,7 +219,6 @@ namespace Sensing4USensor
                 }
             }
 
-            // First: show matches, then non-matches
             foreach (var row in matchedRows)
                 dgvSensorData.Rows.Add(row);
 
