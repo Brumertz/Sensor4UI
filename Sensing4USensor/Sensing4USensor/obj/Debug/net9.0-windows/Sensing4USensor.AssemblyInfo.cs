@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sensing4USensor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32c3684dc1eceafe4465ecf2b876ed710415adfc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96c03905a6778539807175ac888ef57c788bf26b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sensing4USensor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sensing4USensor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

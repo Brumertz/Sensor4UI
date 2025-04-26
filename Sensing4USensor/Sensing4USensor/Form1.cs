@@ -60,30 +60,39 @@ namespace Sensing4USensor
                 return;
             }
 
-            Random rand = new Random();
-            double value = rand.Next(0, 150);
-            var sensor = new SensorData(0, "Manual", DateTime.Now, value);
-            sensor.ColorCategory = SensorColorClassifier.GetColor(value, lowerBound, upperBound);
+            string newLabel = txtNodeLabel.Text.Trim();
 
-            if (datasets.Count == 0)
+            // 1. Update the current dataset's SensorType
+            if (datasets.Count > 0)
             {
-                var initial = new SensorData[1, 1];
-                initial[0, 0] = sensor;
-                datasets.Add(initial);
-                currentIndex = 0;
-            }
-            else
-            {
-                var current = datasets[(int)currentIndex]; // Fix: Cast currentIndex to int
-                var newData = new SensorData[current.GetLength(0) + 1, 1];
-                for (int i = 0; i < current.GetLength(0); i++) // Fix: Use int for loop variable
-                    newData[i, 0] = current[i, 0];
-                newData[current.GetLength(0), 0] = sensor;
-                datasets[(int)currentIndex] = newData; // Fix: Cast currentIndex to int
+                var currentData = datasets[(int)currentIndex];
+
+                for (int d = 0; d < currentData.GetLength(0); d++)
+                {
+                    for (int h = 0; h < currentData.GetLength(1); h++)
+                    {
+                        currentData[d, h].SensorType = newLabel;
+                    }
+                }
             }
 
-            UpdateGrid();
-            UpdateAverage();
+            // 2. Update the button text in pnlSensorButtons
+            if (pnlSensorButtons != null)
+            {
+                foreach (Control ctrl in pnlSensorButtons.Controls)
+                {
+                    if (ctrl is Button btn && (int)btn.Tag == (int)currentIndex)
+                    {
+                        btn.Text = newLabel;
+                        break;
+                    }
+                }
+            }
+
+            // 3. Update groupBox4 label (the grid title)
+            groupBox4.Text = newLabel;
+
+            MessageBox.Show("Sensor label updated successfully.");
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -171,6 +180,7 @@ namespace Sensing4USensor
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+
             string search = txtSearch.Text.ToLower();
             if (string.IsNullOrWhiteSpace(search) || datasets.Count == 0)
                 return;
@@ -181,8 +191,7 @@ namespace Sensing4USensor
 
             dgvSensorData.Rows.Clear();
 
-            List<DataGridViewRow> matchedRows = new();
-            List<DataGridViewRow> nonMatchedRows = new();
+            List<(DateTime, DataGridViewRow)> allRows = new(); // 📅 Store with date for sorting
 
             DateTime startDate = new DateTime(2025, 3, 12); // Adjust if dynamic
 
@@ -196,8 +205,8 @@ namespace Sensing4USensor
                 row.Cells[0].Value = dateString;
 
                 bool isMatch = dateString.ToLower().Contains(search) ||
-                               date.ToString("yyyy-MM-dd").Contains(search) || // ISO style
-                               date.ToString("d").ToLower().Contains(search);   // Short date
+                               date.ToString("yyyy-MM-dd").Contains(search) ||
+                               date.ToString("d").ToLower().Contains(search);
 
                 for (int h = 0; h < hours; h++)
                 {
@@ -205,24 +214,21 @@ namespace Sensing4USensor
                     item.ColorCategory = SensorColorClassifier.GetColor(item.Value, lowerBound, upperBound);
                     row.Cells[h + 1].Value = item.Value.ToString("F2");
 
+                   
                 }
 
                 if (isMatch)
                 {
-                    row.DefaultCellStyle.BackColor = Color.Yellow;
-                    matchedRows.Add(row);
+                    row.DefaultCellStyle.BackColor = Color.Yellow; // ✅ Highlight matched rows
                 }
-                else
-                {
-                    row.DefaultCellStyle.BackColor = Color.White;
-                    nonMatchedRows.Add(row);
-                }
+
+                allRows.Add((date, row)); // 📅 Save with date for sorting
             }
 
-            foreach (var row in matchedRows)
-                dgvSensorData.Rows.Add(row);
+            // 📅 Sort all rows by date ascending
+            var sortedRows = allRows.OrderBy(x => x.Item1).ToList();
 
-            foreach (var row in nonMatchedRows)
+            foreach (var (date, row) in sortedRows)
                 dgvSensorData.Rows.Add(row);
         }
 
