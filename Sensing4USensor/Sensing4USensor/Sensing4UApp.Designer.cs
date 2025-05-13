@@ -1,6 +1,6 @@
 ﻿namespace Sensing4USensor
 {
-    partial class Form1
+    partial class Sensing4UApp
     {
         /// <summary>
         ///  Required designer variable.
@@ -262,7 +262,7 @@
             dgvSensorData.Size = new Size(495, 512);
             dgvSensorData.TabIndex = 0;
             // 
-            // Form1
+            // Sensing4UApp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -270,8 +270,9 @@
             Controls.Add(groupBox4);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Name = "Form1";
+            Name = "Sensing4UApp";
             Text = "Sensing4USensor";
+            Load += Sensing4UApp_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

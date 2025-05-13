@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace Sensing4USensor
 {
-    public partial class Form1 : Form
+    public partial class Sensing4UApp : Form
     {
         private List<SensorData[,]> datasets = new();
         private double currentIndex = 0;
         private double lowerBound = 0.0;
         private double upperBound = 0.0;
         private FlowLayoutPanel? pnlSensorButtons;
-        public Form1()
+        public Sensing4UApp()
         {
             InitializeComponent();
             pnlSensorButtons = new FlowLayoutPanel();
@@ -31,8 +31,8 @@ namespace Sensing4USensor
         {
             if (double.TryParse(txtLower.Text, out double low) && double.TryParse(txtUpper.Text, out double high))
             {
-               this.lowerBound = low;
-               this.upperBound = high;
+                this.lowerBound = low;
+                this.upperBound = high;
                 MessageBox.Show("Range updated.");
                 UpdateGrid();
             }
@@ -44,14 +44,14 @@ namespace Sensing4USensor
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
-           this.lowerBound = 0.0;
-           this.upperBound = 0.0;
+            this.lowerBound = 0.0;
+            this.upperBound = 0.0;
             txtLower.Text = "0.0";
             txtUpper.Text = "0.0";
             UpdateGrid();
-        }
 
+            MessageBox.Show("Range reset to 0.0 - 0.0");
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNodeLabel.Text))
@@ -108,14 +108,14 @@ namespace Sensing4USensor
                 List<SensorData>? rawList = null;
 
                 if (ext == ".bin")
-                    rawList = SensorFileManager.ReadPythonDetailedBinary(openFile.FileName);
+                    rawList = SensorFileManager.Instance.ReadPythonDetailedBinary(openFile.FileName);
                 else if (ext == ".csv")
-                    rawList = SensorFileManager.ReadGridCsv(openFile.FileName);
+                    rawList = SensorFileManager.Instance.ReadGridCsv(openFile.FileName);
 
                 if (rawList != null && rawList.Count > 0)
                 {
                     // Convert list to 2D array
-                    var matrix = SensorFileManager.ToDailyHourlyArray(rawList);
+                    var matrix = SensorFileManager.Instance.ToDailyHourlyArray(rawList);
                     datasets.Add(matrix);
 
                     // Get sensor name from file name
@@ -154,7 +154,8 @@ namespace Sensing4USensor
                 {
                     MessageBox.Show("Failed to load data.");
                 }
-            }}
+            }
+        }
 
 
 
@@ -173,7 +174,7 @@ namespace Sensing4USensor
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                SensorFileManager.WriteBinary(saveFile.FileName, datasets[(int)currentIndex]); // Fix: Cast currentIndex to int
+                SensorFileManager.Instance.WriteBinary(saveFile.FileName, datasets[(int)currentIndex]); // Fix: Cast currentIndex to int
                 MessageBox.Show("File saved successfully.");
             }
         }
@@ -214,7 +215,7 @@ namespace Sensing4USensor
                     item.ColorCategory = SensorColorClassifier.GetColor(item.Value, lowerBound, upperBound);
                     row.Cells[h + 1].Value = item.Value.ToString("F2");
 
-                   
+
                 }
 
                 if (isMatch)
@@ -230,19 +231,20 @@ namespace Sensing4USensor
 
             foreach (var (date, row) in sortedRows)
                 dgvSensorData.Rows.Add(row);
+            MessageBox.Show("Search completed. Highlighted matching rows.");
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtLower.Clear();
-            txtUpper.Clear();
-            txtSearch.Clear();
-            txtAverage.Clear();
-            txtNodeLabel.Clear();
             dgvSensorData.Rows.Clear();
+            dgvSensorData.Columns.Clear();
+
+            if (pnlSensorButtons != null)
+                pnlSensorButtons.Controls.Clear();
+
+            MessageBox.Show("Interface cleared.");
         }
 
-       
 
         // Refresh the DataGridView with colors based on range
 
@@ -323,8 +325,21 @@ namespace Sensing4USensor
 
             txtAverage.Text = (count > 0 ? total / count : 0).ToString("F2");
         }
+        private void TestSingletonInstance()
+        {
+            var instance1 = SensorFileManager.Instance;
+            var instance2 = SensorFileManager.Instance;
 
-        
+            if (ReferenceEquals(instance1, instance2))
+                MessageBox.Show("✅ Singleton test passed: Same instance returned.");
+            else
+                MessageBox.Show("❌ Singleton test failed: Different instances.");
+        }
+
+        private void Sensing4UApp_Load(object sender, EventArgs e)
+        {
+            TestSingletonInstance();
+        }
     }
 }
 
