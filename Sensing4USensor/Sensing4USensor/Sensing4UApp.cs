@@ -5,13 +5,40 @@ using System.Windows.Forms;
 
 namespace Sensing4USensor
 {
+    /// <summary>
+    /// Main application form for the Sensing4U Sensor Management System.
+    /// Allows users to load, view, filter, and save sensor datasets.
+    /// </summary>
     public partial class Sensing4UApp : Form
     {
+        /// <summary>
+        /// Stores all loaded datasets.
+        /// </summary>
         private List<SensorData[,]> datasets = new();
+
+        /// <summary>
+        /// Index of the currently selected dataset.
+        /// </summary>
         private double currentIndex = 0;
+
+        /// <summary>
+        /// Lower threshold for filtering sensor data.
+        /// </summary>
         private double lowerBound = 0.0;
+
+        /// <summary>
+        /// Upper threshold for filtering sensor data.
+        /// </summary>
         private double upperBound = 0.0;
+
+        /// <summary>
+        /// Panel to display dynamically created sensor buttons.
+        /// </summary>
         private FlowLayoutPanel? pnlSensorButtons;
+
+        /// <summary>
+        /// Initializes the application and UI components.
+        /// </summary>
         public Sensing4UApp()
         {
             InitializeComponent();
@@ -22,11 +49,13 @@ namespace Sensing4USensor
             pnlSensorButtons.WrapContents = false;
             pnlSensorButtons.AutoScroll = true;
 
-            groupBox3.Controls.Clear(); // optional: remove old buttons like SensorA/B
+            groupBox3.Controls.Clear();
             groupBox3.Controls.Add(pnlSensorButtons);
-
         }
 
+        /// <summary>
+        /// Event handler to set the filtering range from input fields.
+        /// </summary>
         private void btnSetRange_Click(object sender, EventArgs e)
         {
             if (double.TryParse(txtLower.Text, out double low) && double.TryParse(txtUpper.Text, out double high))
@@ -42,6 +71,9 @@ namespace Sensing4USensor
             }
         }
 
+        /// <summary>
+        /// Resets filtering range to default values (0.0 - 0.0).
+        /// </summary>
         private void btnReset_Click(object sender, EventArgs e)
         {
             this.lowerBound = 0.0;
@@ -49,9 +81,12 @@ namespace Sensing4USensor
             txtLower.Text = "0.0";
             txtUpper.Text = "0.0";
             UpdateGrid();
-
             MessageBox.Show("Range reset to 0.0 - 0.0");
         }
+
+        /// <summary>
+        /// Updates the name (label) for the currently selected dataset.
+        /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNodeLabel.Text))
@@ -62,21 +97,14 @@ namespace Sensing4USensor
 
             string newLabel = txtNodeLabel.Text.Trim();
 
-            // 1. Update the current dataset's SensorType
             if (datasets.Count > 0)
             {
                 var currentData = datasets[(int)currentIndex];
-
                 for (int d = 0; d < currentData.GetLength(0); d++)
-                {
                     for (int h = 0; h < currentData.GetLength(1); h++)
-                    {
                         currentData[d, h].SensorType = newLabel;
-                    }
-                }
             }
 
-            // 2. Update the button text in pnlSensorButtons
             if (pnlSensorButtons != null)
             {
                 foreach (Control ctrl in pnlSensorButtons.Controls)
@@ -89,12 +117,13 @@ namespace Sensing4USensor
                 }
             }
 
-            // 3. Update groupBox4 label (the grid title)
             groupBox4.Text = newLabel;
-
             MessageBox.Show("Sensor label updated successfully.");
         }
 
+        /// <summary>
+        /// Loads a sensor data file (.bin or .csv), processes it, and creates a dynamic button.
+        /// </summary>
         private void btnLoad_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog
@@ -114,25 +143,21 @@ namespace Sensing4USensor
 
                 if (rawList != null && rawList.Count > 0)
                 {
-                    // Convert list to 2D array
                     var matrix = SensorFileManager.Instance.ToDailyHourlyArray(rawList);
                     datasets.Add(matrix);
 
-                    // Get sensor name from file name
                     string sensorName = Path.GetFileNameWithoutExtension(openFile.FileName);
                     int sensorIndex = datasets.Count - 1;
 
-                    // Create dynamic button
                     Button btn = new Button
                     {
                         Text = sensorName,
                         Width = 120,
                         Height = 30,
                         Tag = sensorIndex,
-                        Margin = new Padding(5, 10, 5, 5) // Top spacing
+                        Margin = new Padding(5, 10, 5, 5)
                     };
 
-                    // Set click event
                     btn.Click += (s, ev) =>
                     {
                         currentIndex = (int)((Button)s).Tag;
@@ -141,10 +166,8 @@ namespace Sensing4USensor
                         UpdateAverage();
                     };
 
-                    // Add button to persistent panel
                     pnlSensorButtons.Controls.Add(btn);
 
-                    // Automatically select the new dataset
                     currentIndex = sensorIndex;
                     groupBox4.Text = sensorName;
                     UpdateGrid();
@@ -154,11 +177,14 @@ namespace Sensing4USensor
                 {
                     MessageBox.Show("Failed to load data.");
                 }
+
+                MessageBox.Show("Dataset loaded successfully.");
             }
         }
 
-
-
+        /// <summary>
+        /// Saves the currently selected dataset to a binary file.
+        /// </summary>
         private void btnSaveToFile_Click(object sender, EventArgs e)
         {
             if (datasets.Count == 0)
@@ -174,14 +200,16 @@ namespace Sensing4USensor
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                SensorFileManager.Instance.WriteBinary(saveFile.FileName, datasets[(int)currentIndex]); // Fix: Cast currentIndex to int
+                SensorFileManager.Instance.WriteBinary(saveFile.FileName, datasets[(int)currentIndex]);
                 MessageBox.Show("File saved successfully.");
             }
         }
 
+        /// <summary>
+        /// Searches for datasets by date and highlights matching rows.
+        /// </summary>
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             string search = txtSearch.Text.ToLower();
             if (string.IsNullOrWhiteSpace(search) || datasets.Count == 0)
                 return;
@@ -191,10 +219,9 @@ namespace Sensing4USensor
             int hours = current.GetLength(1);
 
             dgvSensorData.Rows.Clear();
+            List<(DateTime, DataGridViewRow)> allRows = new();
 
-            List<(DateTime, DataGridViewRow)> allRows = new(); // 📅 Store with date for sorting
-
-            DateTime startDate = new DateTime(2025, 3, 12); // Adjust if dynamic
+            DateTime startDate = new DateTime(2025, 3, 12);
 
             for (int d = 0; d < days; d++)
             {
@@ -214,40 +241,38 @@ namespace Sensing4USensor
                     var item = current[d, h];
                     item.ColorCategory = SensorColorClassifier.GetColor(item.Value, lowerBound, upperBound);
                     row.Cells[h + 1].Value = item.Value.ToString("F2");
-
-
                 }
 
                 if (isMatch)
-                {
-                    row.DefaultCellStyle.BackColor = Color.Yellow; // ✅ Highlight matched rows
-                }
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
 
-                allRows.Add((date, row)); // 📅 Save with date for sorting
+                allRows.Add((date, row));
             }
 
-            // 📅 Sort all rows by date ascending
             var sortedRows = allRows.OrderBy(x => x.Item1).ToList();
 
             foreach (var (date, row) in sortedRows)
                 dgvSensorData.Rows.Add(row);
+
             MessageBox.Show("Search completed. Highlighted matching rows.");
         }
 
+        /// <summary>
+        /// Clears the interface including the grid and sensor buttons.
+        /// </summary>
         private void btnClear_Click(object sender, EventArgs e)
         {
             dgvSensorData.Rows.Clear();
             dgvSensorData.Columns.Clear();
 
-            if (pnlSensorButtons != null)
-                pnlSensorButtons.Controls.Clear();
+            pnlSensorButtons?.Controls.Clear();
 
             MessageBox.Show("Interface cleared.");
         }
 
-
-        // Refresh the DataGridView with colors based on range
-
+        /// <summary>
+        /// Updates the grid with values from the selected dataset.
+        /// </summary>
         private void UpdateGrid()
         {
             dgvSensorData.Columns.Clear();
@@ -255,24 +280,19 @@ namespace Sensing4USensor
 
             if (datasets.Count == 0) return;
 
-            var data = datasets[(int)currentIndex]; // Fix: Cast currentIndex to int
-            int days = data.GetLength(0); // ✅ ahora días es el primer índice
-            int hours = data.GetLength(1); // ✅ y horas el segundo
+            var data = datasets[(int)currentIndex];
+            int days = data.GetLength(0);
+            int hours = data.GetLength(1);
 
             dgvSensorData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvSensorData.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            // ➕ Primera columna: Fecha
             dgvSensorData.Columns.Add("Date", "Date");
 
-            // ➕ Crear columnas para cada hora
             for (int h = 0; h < hours; h++)
-            {
                 dgvSensorData.Columns.Add($"Hour{h}", $"Hour {h}");
-            }
 
-            // 🔁 Crear filas por día
-            DateTime startDate = new DateTime(2025, 3, 12); // o la fecha inicial de tu archivo
+            DateTime startDate = new DateTime(2025, 3, 12);
             for (int d = 0; d < days; d++)
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -283,12 +303,10 @@ namespace Sensing4USensor
 
                 for (int h = 0; h < hours; h++)
                 {
-                    var sensor = data[d, h]; // ✅ nota: [día, hora]
-
-                    sensor.ColorCategory = SensorColorClassifier.GetColor((double)sensor.Value, lowerBound, upperBound);
+                    var sensor = data[d, h];
+                    sensor.ColorCategory = SensorColorClassifier.GetColor(sensor.Value, lowerBound, upperBound);
                     row.Cells[h + 1].Value = sensor.Value.ToString("F2");
 
-                    // 🎨 Aplicar color según categoría
                     switch (sensor.ColorCategory)
                     {
                         case ColorCategory.Low:
@@ -307,13 +325,14 @@ namespace Sensing4USensor
             }
         }
 
-
-        // Calculate average value from current dataset
+        /// <summary>
+        /// Calculates and displays the average sensor value of the current dataset.
+        /// </summary>
         private void UpdateAverage()
         {
             if (datasets.Count == 0) return;
 
-            var data = datasets[(int)currentIndex]; // Fix: Cast currentIndex to int
+            var data = datasets[(int)currentIndex];
             double total = 0;
             int count = 0;
 
@@ -325,6 +344,10 @@ namespace Sensing4USensor
 
             txtAverage.Text = (count > 0 ? total / count : 0).ToString("F2");
         }
+
+        /// <summary>
+        /// Tests whether the singleton instance of SensorFileManager works correctly.
+        /// </summary>
         private void TestSingletonInstance()
         {
             var instance1 = SensorFileManager.Instance;
@@ -336,10 +359,12 @@ namespace Sensing4USensor
                 MessageBox.Show("❌ Singleton test failed: Different instances.");
         }
 
+        /// <summary>
+        /// Handles form load event to perform singleton instance test.
+        /// </summary>
         private void Sensing4UApp_Load(object sender, EventArgs e)
         {
             TestSingletonInstance();
         }
     }
 }
-

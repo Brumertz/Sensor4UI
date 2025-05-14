@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor
+  commentId: N:Sensing4USensor
+  id: Sensing4USensor
+  children:
+  - Sensing4USensor.Sensing4UApp
+  langs:
+  - csharp
+  - vb
+  name: Sensing4USensor
+  nameWithType: Sensing4USensor
+  fullName: Sensing4USensor
+  type: Namespace
+  assemblies:
+  - Sensing4USensor
+references:
+- uid: Sensing4USensor.Sensing4UApp
+  commentId: T:Sensing4USensor.Sensing4UApp
+  href: Sensing4USensor.Sensing4UApp.html
+  name: Sensing4UApp
+  nameWithType: Sensing4UApp
+  fullName: Sensing4USensor.Sensing4UApp

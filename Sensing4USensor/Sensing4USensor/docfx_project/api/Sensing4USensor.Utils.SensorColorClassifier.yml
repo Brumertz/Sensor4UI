@@ -1,0 +1,391 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor.Utils.SensorColorClassifier
+  commentId: T:Sensing4USensor.Utils.SensorColorClassifier
+  id: SensorColorClassifier
+  parent: Sensing4USensor.Utils
+  children:
+  - Sensing4USensor.Utils.SensorColorClassifier.GetColor(System.Double,System.Double,System.Double)
+  langs:
+  - csharp
+  - vb
+  name: SensorColorClassifier
+  nameWithType: SensorColorClassifier
+  fullName: Sensing4USensor.Utils.SensorColorClassifier
+  type: Class
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorColorClassifier.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: SensorColorClassifier
+    path: ../Utils/SensorColorClassifier.cs
+    startLine: 12
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Utility class for sensor color classification.
+  example: []
+  syntax:
+    content: public static class SensorColorClassifier
+    content.vb: Public Module SensorColorClassifier
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Sensing4USensor.Utils.SensorColorClassifier.GetColor(System.Double,System.Double,System.Double)
+  commentId: M:Sensing4USensor.Utils.SensorColorClassifier.GetColor(System.Double,System.Double,System.Double)
+  id: GetColor(System.Double,System.Double,System.Double)
+  parent: Sensing4USensor.Utils.SensorColorClassifier
+  langs:
+  - csharp
+  - vb
+  name: GetColor(double, double, double)
+  nameWithType: SensorColorClassifier.GetColor(double, double, double)
+  fullName: Sensing4USensor.Utils.SensorColorClassifier.GetColor(double, double, double)
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorColorClassifier.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: GetColor
+    path: ../Utils/SensorColorClassifier.cs
+    startLine: 21
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Returns a color category based on the value and given thresholds.
+  example: []
+  syntax:
+    content: public static ColorCategory GetColor(double value, double lower, double upper)
+    parameters:
+    - id: value
+      type: System.Double
+      description: The sensor value.
+    - id: lower
+      type: System.Double
+      description: Lower acceptable threshold.
+    - id: upper
+      type: System.Double
+      description: Upper acceptable threshold.
+    return:
+      type: Sensing4USensor.Models.ColorCategory
+      description: Low, Acceptable, or High category.
+    content.vb: Public Shared Function GetColor(value As Double, lower As Double, upper As Double) As ColorCategory
+  overload: Sensing4USensor.Utils.SensorColorClassifier.GetColor*
+  nameWithType.vb: SensorColorClassifier.GetColor(Double, Double, Double)
+  fullName.vb: Sensing4USensor.Utils.SensorColorClassifier.GetColor(Double, Double, Double)
+  name.vb: GetColor(Double, Double, Double)
+references:
+- uid: Sensing4USensor.Utils
+  commentId: N:Sensing4USensor.Utils
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Utils
+  nameWithType: Sensing4USensor.Utils
+  fullName: Sensing4USensor.Utils
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sensing4USensor.Utils.SensorColorClassifier.GetColor*
+  commentId: Overload:Sensing4USensor.Utils.SensorColorClassifier.GetColor
+  href: Sensing4USensor.Utils.SensorColorClassifier.html#Sensing4USensor_Utils_SensorColorClassifier_GetColor_System_Double_System_Double_System_Double_
+  name: GetColor
+  nameWithType: SensorColorClassifier.GetColor
+  fullName: Sensing4USensor.Utils.SensorColorClassifier.GetColor
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Sensing4USensor.Models.ColorCategory
+  commentId: T:Sensing4USensor.Models.ColorCategory
+  parent: Sensing4USensor.Models
+  href: Sensing4USensor.Models.ColorCategory.html
+  name: ColorCategory
+  nameWithType: ColorCategory
+  fullName: Sensing4USensor.Models.ColorCategory
+- uid: Sensing4USensor.Models
+  commentId: N:Sensing4USensor.Models
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Models
+  nameWithType: Sensing4USensor.Models
+  fullName: Sensing4USensor.Models
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html

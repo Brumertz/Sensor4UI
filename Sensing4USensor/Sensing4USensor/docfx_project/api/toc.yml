@@ -1,0 +1,30 @@
+### YamlMime:TableOfContent
+items:
+- uid: Sensing4USensor
+  name: Sensing4USensor
+  type: Namespace
+  items:
+  - uid: Sensing4USensor.Sensing4UApp
+    name: Sensing4UApp
+    type: Class
+- uid: Sensing4USensor.Models
+  name: Sensing4USensor.Models
+  type: Namespace
+  items:
+  - uid: Sensing4USensor.Models.ColorCategory
+    name: ColorCategory
+    type: Enum
+  - uid: Sensing4USensor.Models.SensorData
+    name: SensorData
+    type: Class
+- uid: Sensing4USensor.Utils
+  name: Sensing4USensor.Utils
+  type: Namespace
+  items:
+  - uid: Sensing4USensor.Utils.SensorColorClassifier
+    name: SensorColorClassifier
+    type: Class
+  - uid: Sensing4USensor.Utils.SensorFileManager
+    name: SensorFileManager
+    type: Class
+memberLayout: SamePage

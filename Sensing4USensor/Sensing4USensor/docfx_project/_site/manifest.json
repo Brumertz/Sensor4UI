@@ -1,0 +1,200 @@
+{
+  "source_base_path": "C:/Users/BrumertzTafe/Desktop/Sensing4U Sensor Management MVP/Sensor4UI/Sensing4USensor/Sensing4USensor/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Models.ColorCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Models.ColorCategory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Models.ColorCategory",
+      "Summary": "<p sourcefile=\"api/Sensing4USensor.Models.ColorCategory.yml\" sourcestartlinenumber=\"1\">Represents the color category of a sensor reading, based on its value range.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Models.SensorData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Models.SensorData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Models.SensorData",
+      "Summary": "<p sourcefile=\"api/Sensing4USensor.Models.SensorData.yml\" sourcestartlinenumber=\"1\">Represents a sensor reading including metadata like timestamp, value, and category.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Sensing4UApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Sensing4UApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Sensing4UApp",
+      "Summary": "<p sourcefile=\"api/Sensing4USensor.Sensing4UApp.yml\" sourcestartlinenumber=\"1\">Main application form for the Sensing4U Sensor Management System.\nAllows users to load, view, filter, and save sensor datasets.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Utils.SensorColorClassifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Utils.SensorColorClassifier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Utils.SensorColorClassifier",
+      "Summary": "<p sourcefile=\"api/Sensing4USensor.Utils.SensorColorClassifier.yml\" sourcestartlinenumber=\"1\">Utility class for sensor color classification.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Utils.SensorFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Utils.SensorFileManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Utils.SensorFileManager",
+      "Summary": "<p sourcefile=\"api/Sensing4USensor.Utils.SensorFileManager.yml\" sourcestartlinenumber=\"1\">Provides methods to read and write sensor data from binary and CSV files.\nImplements the Singleton pattern for consistent file management.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor.Utils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Sensing4USensor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Sensing4USensor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sensing4USensor",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,705 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor.Utils.SensorFileManager
+  commentId: T:Sensing4USensor.Utils.SensorFileManager
+  id: SensorFileManager
+  parent: Sensing4USensor.Utils
+  children:
+  - Sensing4USensor.Utils.SensorFileManager.Instance
+  - Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)
+  - Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)
+  - Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  - Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  - Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])
+  langs:
+  - csharp
+  - vb
+  name: SensorFileManager
+  nameWithType: SensorFileManager
+  fullName: Sensing4USensor.Utils.SensorFileManager
+  type: Class
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: SensorFileManager
+    path: ../Utils/SensorFileManager.cs
+    startLine: 13
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: >-
+    Provides methods to read and write sensor data from binary and CSV files.
+
+    Implements the Singleton pattern for consistent file management.
+  example: []
+  syntax:
+    content: public class SensorFileManager
+    content.vb: Public Class SensorFileManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Sensing4USensor.Utils.SensorFileManager.Instance
+  commentId: P:Sensing4USensor.Utils.SensorFileManager.Instance
+  id: Instance
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SensorFileManager.Instance
+  fullName: Sensing4USensor.Utils.SensorFileManager.Instance
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Instance
+    path: ../Utils/SensorFileManager.cs
+    startLine: 25
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Singleton instance of the SensorFileManager.
+  example: []
+  syntax:
+    content: public static SensorFileManager Instance { get; }
+    parameters: []
+    return:
+      type: Sensing4USensor.Utils.SensorFileManager
+    content.vb: Public Shared ReadOnly Property Instance As SensorFileManager
+  overload: Sensing4USensor.Utils.SensorFileManager.Instance*
+- uid: Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])
+  id: WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: WriteBinary(string, SensorData[,])
+  nameWithType: SensorFileManager.WriteBinary(string, SensorData[,])
+  fullName: Sensing4USensor.Utils.SensorFileManager.WriteBinary(string, Sensing4USensor.Models.SensorData[,])
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: WriteBinary
+    path: ../Utils/SensorFileManager.cs
+    startLine: 40
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Saves a 2D array of sensor data to a binary file.
+  example: []
+  syntax:
+    content: public void WriteBinary(string path, SensorData[,] data)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path where the file will be saved.
+    - id: data
+      type: Sensing4USensor.Models.SensorData[,]
+      description: The 2D array of SensorData to write.
+    content.vb: Public Sub WriteBinary(path As String, data As SensorData(,))
+  overload: Sensing4USensor.Utils.SensorFileManager.WriteBinary*
+  nameWithType.vb: SensorFileManager.WriteBinary(String, SensorData(,))
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.WriteBinary(String, Sensing4USensor.Models.SensorData(,))
+  name.vb: WriteBinary(String, SensorData(,))
+- uid: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)
+  id: ReadPythonDetailedBinary(System.String)
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: ReadPythonDetailedBinary(string)
+  nameWithType: SensorFileManager.ReadPythonDetailedBinary(string)
+  fullName: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(string)
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ReadPythonDetailedBinary
+    path: ../Utils/SensorFileManager.cs
+    startLine: 78
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Reads sensor data from a binary file created using Python-compatible format.
+  example: []
+  syntax:
+    content: public List<SensorData>? ReadPythonDetailedBinary(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path of the binary file.
+    return:
+      type: System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+      description: List of SensorData objects or null if an error occurs.
+    content.vb: Public Function ReadPythonDetailedBinary(path As String) As List(Of SensorData)
+  overload: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary*
+  nameWithType.vb: SensorFileManager.ReadPythonDetailedBinary(String)
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(String)
+  name.vb: ReadPythonDetailedBinary(String)
+- uid: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)
+  id: ReadGridCsv(System.String)
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: ReadGridCsv(string)
+  nameWithType: SensorFileManager.ReadGridCsv(string)
+  fullName: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(string)
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ReadGridCsv
+    path: ../Utils/SensorFileManager.cs
+    startLine: 119
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: 'Reads sensor data from a CSV file with the format: Date,hour 0,...,hour 23.'
+  example: []
+  syntax:
+    content: public List<SensorData>? ReadGridCsv(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path to the CSV file.
+    return:
+      type: System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+      description: List of SensorData or null if reading fails.
+    content.vb: Public Function ReadGridCsv(path As String) As List(Of SensorData)
+  overload: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv*
+  nameWithType.vb: SensorFileManager.ReadGridCsv(String)
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(String)
+  name.vb: ReadGridCsv(String)
+- uid: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  id: To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: To2DArray(List<SensorData>)
+  nameWithType: SensorFileManager.To2DArray(List<SensorData>)
+  fullName: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List<Sensing4USensor.Models.SensorData>)
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: To2DArray
+    path: ../Utils/SensorFileManager.cs
+    startLine: 164
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Converts a flat list of SensorData into a 2D array with one column.
+  example: []
+  syntax:
+    content: public SensorData[,] To2DArray(List<SensorData> list)
+    parameters:
+    - id: list
+      type: System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+      description: The list to convert.
+    return:
+      type: Sensing4USensor.Models.SensorData[,]
+      description: A 2D array of SensorData [n,1].
+    content.vb: Public Function To2DArray(list As List(Of SensorData)) As SensorData(,)
+  overload: Sensing4USensor.Utils.SensorFileManager.To2DArray*
+  nameWithType.vb: SensorFileManager.To2DArray(List(Of SensorData))
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List(Of Sensing4USensor.Models.SensorData))
+  name.vb: To2DArray(List(Of SensorData))
+- uid: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  id: ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  parent: Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: ToDailyHourlyArray(List<SensorData>)
+  nameWithType: SensorFileManager.ToDailyHourlyArray(List<SensorData>)
+  fullName: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List<Sensing4USensor.Models.SensorData>)
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ToDailyHourlyArray
+    path: ../Utils/SensorFileManager.cs
+    startLine: 179
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Utils
+  summary: Converts a list of SensorData into a 2D array organized by [day, hour].
+  example: []
+  syntax:
+    content: public SensorData[,] ToDailyHourlyArray(List<SensorData> data)
+    parameters:
+    - id: data
+      type: System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+      description: Flat list of sensor data records.
+    return:
+      type: Sensing4USensor.Models.SensorData[,]
+      description: 2D array of SensorData grouped by day and hour.
+    content.vb: Public Function ToDailyHourlyArray(data As List(Of SensorData)) As SensorData(,)
+  overload: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray*
+  nameWithType.vb: SensorFileManager.ToDailyHourlyArray(List(Of SensorData))
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List(Of Sensing4USensor.Models.SensorData))
+  name.vb: ToDailyHourlyArray(List(Of SensorData))
+references:
+- uid: Sensing4USensor.Utils
+  commentId: N:Sensing4USensor.Utils
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Utils
+  nameWithType: Sensing4USensor.Utils
+  fullName: Sensing4USensor.Utils
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sensing4USensor.Utils.SensorFileManager.Instance*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.Instance
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_Instance
+  name: Instance
+  nameWithType: SensorFileManager.Instance
+  fullName: Sensing4USensor.Utils.SensorFileManager.Instance
+- uid: Sensing4USensor.Utils.SensorFileManager
+  commentId: T:Sensing4USensor.Utils.SensorFileManager
+  parent: Sensing4USensor.Utils
+  href: Sensing4USensor.Utils.SensorFileManager.html
+  name: SensorFileManager
+  nameWithType: SensorFileManager
+  fullName: Sensing4USensor.Utils.SensorFileManager
+- uid: Sensing4USensor.Utils.SensorFileManager.WriteBinary*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.WriteBinary
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_WriteBinary_System_String_Sensing4USensor_Models_SensorData_0
+  name: WriteBinary
+  nameWithType: SensorFileManager.WriteBinary
+  fullName: Sensing4USensor.Utils.SensorFileManager.WriteBinary
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sensing4USensor.Models.SensorData[,]
+  isExternal: true
+  href: Sensing4USensor.Models.SensorData.html
+  name: SensorData[,]
+  nameWithType: SensorData[,]
+  fullName: Sensing4USensor.Models.SensorData[,]
+  nameWithType.vb: SensorData(,)
+  fullName.vb: Sensing4USensor.Models.SensorData(,)
+  name.vb: SensorData(,)
+  spec.csharp:
+  - uid: Sensing4USensor.Models.SensorData
+    name: SensorData
+    href: Sensing4USensor.Models.SensorData.html
+  - name: '['
+  - name: ','
+  - name: ']'
+  spec.vb:
+  - uid: Sensing4USensor.Models.SensorData
+    name: SensorData
+    href: Sensing4USensor.Models.SensorData.html
+  - name: (
+  - name: ','
+  - name: )
+- uid: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ReadPythonDetailedBinary_System_String_
+  name: ReadPythonDetailedBinary
+  nameWithType: SensorFileManager.ReadPythonDetailedBinary
+  fullName: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary
+- uid: System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+  commentId: T:System.Collections.Generic.List{Sensing4USensor.Models.SensorData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<SensorData>
+  nameWithType: List<SensorData>
+  fullName: System.Collections.Generic.List<Sensing4USensor.Models.SensorData>
+  nameWithType.vb: List(Of SensorData)
+  fullName.vb: System.Collections.Generic.List(Of Sensing4USensor.Models.SensorData)
+  name.vb: List(Of SensorData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Sensing4USensor.Models.SensorData
+    name: SensorData
+    href: Sensing4USensor.Models.SensorData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sensing4USensor.Models.SensorData
+    name: SensorData
+    href: Sensing4USensor.Models.SensorData.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.ReadGridCsv
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ReadGridCsv_System_String_
+  name: ReadGridCsv
+  nameWithType: SensorFileManager.ReadGridCsv
+  fullName: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv
+- uid: Sensing4USensor.Utils.SensorFileManager.To2DArray*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.To2DArray
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_To2DArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__
+  name: To2DArray
+  nameWithType: SensorFileManager.To2DArray
+  fullName: Sensing4USensor.Utils.SensorFileManager.To2DArray
+- uid: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray*
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray
+  href: Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__
+  name: ToDailyHourlyArray
+  nameWithType: SensorFileManager.ToDailyHourlyArray
+  fullName: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray

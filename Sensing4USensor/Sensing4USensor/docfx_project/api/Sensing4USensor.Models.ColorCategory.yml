@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor.Models.ColorCategory
+  commentId: T:Sensing4USensor.Models.ColorCategory
+  id: ColorCategory
+  parent: Sensing4USensor.Models
+  children:
+  - Sensing4USensor.Models.ColorCategory.Acceptable
+  - Sensing4USensor.Models.ColorCategory.High
+  - Sensing4USensor.Models.ColorCategory.Low
+  langs:
+  - csharp
+  - vb
+  name: ColorCategory
+  nameWithType: ColorCategory
+  fullName: Sensing4USensor.Models.ColorCategory
+  type: Enum
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ColorCategory
+    path: ../Models/SensorData.cs
+    startLine: 7
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Represents the color category of a sensor reading, based on its value range.
+  example: []
+  syntax:
+    content: public enum ColorCategory
+    content.vb: Public Enum ColorCategory
+- uid: Sensing4USensor.Models.ColorCategory.Low
+  commentId: F:Sensing4USensor.Models.ColorCategory.Low
+  id: Low
+  parent: Sensing4USensor.Models.ColorCategory
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: ColorCategory.Low
+  fullName: Sensing4USensor.Models.ColorCategory.Low
+  type: Field
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Low
+    path: ../Models/SensorData.cs
+    startLine: 10
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Sensor value is below the acceptable lower bound.
+  example: []
+  syntax:
+    content: Low = 0
+    return:
+      type: Sensing4USensor.Models.ColorCategory
+- uid: Sensing4USensor.Models.ColorCategory.Acceptable
+  commentId: F:Sensing4USensor.Models.ColorCategory.Acceptable
+  id: Acceptable
+  parent: Sensing4USensor.Models.ColorCategory
+  langs:
+  - csharp
+  - vb
+  name: Acceptable
+  nameWithType: ColorCategory.Acceptable
+  fullName: Sensing4USensor.Models.ColorCategory.Acceptable
+  type: Field
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Acceptable
+    path: ../Models/SensorData.cs
+    startLine: 12
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Sensor value is within the acceptable range.
+  example: []
+  syntax:
+    content: Acceptable = 1
+    return:
+      type: Sensing4USensor.Models.ColorCategory
+- uid: Sensing4USensor.Models.ColorCategory.High
+  commentId: F:Sensing4USensor.Models.ColorCategory.High
+  id: High
+  parent: Sensing4USensor.Models.ColorCategory
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: ColorCategory.High
+  fullName: Sensing4USensor.Models.ColorCategory.High
+  type: Field
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: High
+    path: ../Models/SensorData.cs
+    startLine: 14
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Sensor value is above the acceptable upper bound.
+  example: []
+  syntax:
+    content: High = 2
+    return:
+      type: Sensing4USensor.Models.ColorCategory
+references:
+- uid: Sensing4USensor.Models
+  commentId: N:Sensing4USensor.Models
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Models
+  nameWithType: Sensing4USensor.Models
+  fullName: Sensing4USensor.Models
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html
+- uid: Sensing4USensor.Models.ColorCategory
+  commentId: T:Sensing4USensor.Models.ColorCategory
+  parent: Sensing4USensor.Models
+  href: Sensing4USensor.Models.ColorCategory.html
+  name: ColorCategory
+  nameWithType: ColorCategory
+  fullName: Sensing4USensor.Models.ColorCategory

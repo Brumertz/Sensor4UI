@@ -3,7 +3,6 @@ C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\bin\Debug\net9.0-windows\Sensing4USensor.runtimeconfig.json
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\bin\Debug\net9.0-windows\Sensing4USensor.dll
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\bin\Debug\net9.0-windows\Sensing4USensor.pdb
-C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.Form1.resources
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.csproj.GenerateResource.cache
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.AssemblyInfoInputs.cache
@@ -15,3 +14,6 @@ C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.pdb
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.genruntimeconfig.cache
 C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\ref\Sensing4USensor.dll
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.Sensing4UApp.resources
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\bin\Debug\net9.0-windows\Sensing4USensor.xml
+C:\Users\BrumertzTafe\Desktop\Sensing4U Sensor Management MVP\Sensor4UI\Sensing4USensor\Sensing4USensor\obj\Debug\net9.0-windows\Sensing4USensor.xml

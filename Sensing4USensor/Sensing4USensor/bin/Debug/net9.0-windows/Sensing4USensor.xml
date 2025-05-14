@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sensing4USensor</name>
+    </assembly>
+    <members>
+        <member name="T:Sensing4USensor.Models.ColorCategory">
+            <summary>
+            Represents the color category of a sensor reading, based on its value range.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Models.ColorCategory.Low">
+            <summary>Sensor value is below the acceptable lower bound.</summary>
+        </member>
+        <member name="F:Sensing4USensor.Models.ColorCategory.Acceptable">
+            <summary>Sensor value is within the acceptable range.</summary>
+        </member>
+        <member name="F:Sensing4USensor.Models.ColorCategory.High">
+            <summary>Sensor value is above the acceptable upper bound.</summary>
+        </member>
+        <member name="T:Sensing4USensor.Models.SensorData">
+            <summary>
+            Represents a sensor reading including metadata like timestamp, value, and category.
+            </summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.Id">
+            <summary>Unique identifier for the sensor reading.</summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.SensorType">
+            <summary>Type or label of the sensor that generated the reading.</summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.Timestamp">
+            <summary>Date and time of the sensor reading.</summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.Value">
+            <summary>Measured value from the sensor.</summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.ColorCategory">
+            <summary>Color category assigned based on the value range.</summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.Date">
+            <summary>
+            Extracts the date portion of the timestamp (ignores time).
+            </summary>
+        </member>
+        <member name="P:Sensing4USensor.Models.SensorData.Hour">
+            <summary>
+            Extracts the hour portion of the timestamp.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Models.SensorData.#ctor">
+            <summary>
+            Default constructor for fallback or placeholder data.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Models.SensorData.#ctor(System.Int32,System.String,System.DateTime,System.Double)">
+            <summary>
+            Creates a SensorData object with full properties.
+            </summary>
+            <param name="id">Sensor ID.</param>
+            <param name="sensorType">Sensor label or type.</param>
+            <param name="timestamp">Timestamp of the reading.</param>
+            <param name="value">Measured value.</param>
+        </member>
+        <member name="M:Sensing4USensor.Models.SensorData.#ctor(System.String,System.DateTime,System.Double)">
+            <summary>
+            Overload constructor with default ID.
+            </summary>
+            <param name="sensorType">Sensor label or type.</param>
+            <param name="timestamp">Timestamp of the reading.</param>
+            <param name="value">Measured value.</param>
+        </member>
+        <member name="M:Sensing4USensor.Models.SensorData.ToString">
+            <summary>
+            Converts the SensorData instance into a formatted string.
+            </summary>
+            <returns>Formatted sensor reading with category and timestamp.</returns>
+        </member>
+        <member name="M:Sensing4USensor.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Sensing4USensor.Sensing4UApp">
+            <summary>
+            Main application form for the Sensing4U Sensor Management System.
+            Allows users to load, view, filter, and save sensor datasets.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.datasets">
+            <summary>
+            Stores all loaded datasets.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.currentIndex">
+            <summary>
+            Index of the currently selected dataset.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.lowerBound">
+            <summary>
+            Lower threshold for filtering sensor data.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.upperBound">
+            <summary>
+            Upper threshold for filtering sensor data.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.pnlSensorButtons">
+            <summary>
+            Panel to display dynamically created sensor buttons.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.#ctor">
+            <summary>
+            Initializes the application and UI components.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnSetRange_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handler to set the filtering range from input fields.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnReset_Click(System.Object,System.EventArgs)">
+            <summary>
+            Resets filtering range to default values (0.0 - 0.0).
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            Updates the name (label) for the currently selected dataset.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnLoad_Click(System.Object,System.EventArgs)">
+            <summary>
+            Loads a sensor data file (.bin or .csv), processes it, and creates a dynamic button.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnSaveToFile_Click(System.Object,System.EventArgs)">
+            <summary>
+            Saves the currently selected dataset to a binary file.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnSearch_Click(System.Object,System.EventArgs)">
+            <summary>
+            Searches for datasets by date and highlights matching rows.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.btnClear_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clears the interface including the grid and sensor buttons.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.UpdateGrid">
+            <summary>
+            Updates the grid with values from the selected dataset.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.UpdateAverage">
+            <summary>
+            Calculates and displays the average sensor value of the current dataset.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.TestSingletonInstance">
+            <summary>
+            Tests whether the singleton instance of SensorFileManager works correctly.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.Sensing4UApp_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles form load event to perform singleton instance test.
+            </summary>
+        </member>
+        <member name="F:Sensing4USensor.Sensing4UApp.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Sensing4USensor.Utils.SensorColorClassifier">
+            <summary>
+            Utility class for sensor color classification.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorColorClassifier.GetColor(System.Double,System.Double,System.Double)">
+            <summary>
+            Returns a color category based on the value and given thresholds.
+            </summary>
+            <param name="value">The sensor value.</param>
+            <param name="lower">Lower acceptable threshold.</param>
+            <param name="upper">Upper acceptable threshold.</param>
+            <returns>Low, Acceptable, or High category.</returns>
+        </member>
+        <member name="T:Sensing4USensor.Utils.SensorFileManager">
+            <summary>
+            Provides methods to read and write sensor data from binary and CSV files.
+            Implements the Singleton pattern for consistent file management.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.#ctor">
+            <summary>
+            Private constructor to enforce Singleton pattern.
+            </summary>
+        </member>
+        <member name="P:Sensing4USensor.Utils.SensorFileManager.Instance">
+            <summary>
+            Singleton instance of the SensorFileManager.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])">
+            <summary>
+            Saves a 2D array of sensor data to a binary file.
+            </summary>
+            <param name="path">Path where the file will be saved.</param>
+            <param name="data">The 2D array of SensorData to write.</param>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)">
+            <summary>
+            Reads sensor data from a binary file created using Python-compatible format.
+            </summary>
+            <param name="path">Path of the binary file.</param>
+            <returns>List of SensorData objects or null if an error occurs.</returns>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)">
+            <summary>
+            Reads sensor data from a CSV file with the format: Date,hour 0,...,hour 23.
+            </summary>
+            <param name="path">Path to the CSV file.</param>
+            <returns>List of SensorData or null if reading fails.</returns>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
+            <summary>
+            Converts a flat list of SensorData into a 2D array with one column.
+            </summary>
+            <param name="list">The list to convert.</param>
+            <returns>A 2D array of SensorData [n,1].</returns>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
+            <summary>
+            Converts a list of SensorData into a 2D array organized by [day, hour].
+            </summary>
+            <param name="data">Flat list of sensor data records.</param>
+            <returns>2D array of SensorData grouped by day and hour.</returns>
+        </member>
+        <member name="T:Sensing4USensor.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>

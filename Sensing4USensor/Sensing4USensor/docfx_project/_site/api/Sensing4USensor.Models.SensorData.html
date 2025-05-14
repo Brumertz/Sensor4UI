@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SensorData | Sensing4U </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SensorData | Sensing4U ">
+      
+      <meta name="description" content="Represents a sensor reading including metadata like timestamp, value, and category.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Brumertz/Sensor4UI/new/main/apiSpec/new?filename=Sensing4USensor_Models_SensorData.md&amp;value=---%0Auid%3A%20Sensing4USensor.Models.SensorData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Sensing4U">
+            Sensing4U
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Sensing4USensor.Models.SensorData">
+
+
+
+  <h1 id="Sensing4USensor_Models_SensorData" data-uid="Sensing4USensor.Models.SensorData" class="text-break">
+Class SensorData  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Sensing4USensor.html">Sensing4USensor</a>.<a class="xref" href="Sensing4USensor.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Sensing4USensor.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a sensor reading including metadata like timestamp, value, and category.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SensorData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SensorData</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Sensing4USensor_Models_SensorData__ctor_" data-uid="Sensing4USensor.Models.SensorData.#ctor*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData__ctor" data-uid="Sensing4USensor.Models.SensorData.#ctor">
+  SensorData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor for fallback or placeholder data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SensorData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData__ctor_" data-uid="Sensing4USensor.Models.SensorData.#ctor*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData__ctor_System_Int32_System_String_System_DateTime_System_Double_" data-uid="Sensing4USensor.Models.SensorData.#ctor(System.Int32,System.String,System.DateTime,System.Double)">
+  SensorData(int, string, DateTime, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a SensorData object with full properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SensorData(int id, string sensorType, DateTime timestamp, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Sensor ID.</p>
+</dd>
+    <dt><code>sensorType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Sensor label or type.</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Timestamp of the reading.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Measured value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData__ctor_" data-uid="Sensing4USensor.Models.SensorData.#ctor*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData__ctor_System_String_System_DateTime_System_Double_" data-uid="Sensing4USensor.Models.SensorData.#ctor(System.String,System.DateTime,System.Double)">
+  SensorData(string, DateTime, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overload constructor with default ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SensorData(string sensorType, DateTime timestamp, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sensorType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Sensor label or type.</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>Timestamp of the reading.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Measured value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Sensing4USensor_Models_SensorData_ColorCategory_" data-uid="Sensing4USensor.Models.SensorData.ColorCategory*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_ColorCategory" data-uid="Sensing4USensor.Models.SensorData.ColorCategory">
+  ColorCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Color category assigned based on the value range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorCategory ColorCategory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Sensing4USensor.Models.ColorCategory.html">ColorCategory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_Date_" data-uid="Sensing4USensor.Models.SensorData.Date*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_Date" data-uid="Sensing4USensor.Models.SensorData.Date">
+  Date
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extracts the date portion of the timestamp (ignores time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Date { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_Hour_" data-uid="Sensing4USensor.Models.SensorData.Hour*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_Hour" data-uid="Sensing4USensor.Models.SensorData.Hour">
+  Hour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extracts the hour portion of the timestamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Hour { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_Id_" data-uid="Sensing4USensor.Models.SensorData.Id*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_Id" data-uid="Sensing4USensor.Models.SensorData.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique identifier for the sensor reading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_SensorType_" data-uid="Sensing4USensor.Models.SensorData.SensorType*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_SensorType" data-uid="Sensing4USensor.Models.SensorData.SensorType">
+  SensorType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type or label of the sensor that generated the reading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SensorType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_Timestamp_" data-uid="Sensing4USensor.Models.SensorData.Timestamp*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_Timestamp" data-uid="Sensing4USensor.Models.SensorData.Timestamp">
+  Timestamp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Date and time of the sensor reading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Timestamp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Models_SensorData_Value_" data-uid="Sensing4USensor.Models.SensorData.Value*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_Value" data-uid="Sensing4USensor.Models.SensorData.Value">
+  Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measured value from the sensor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Sensing4USensor_Models_SensorData_ToString_" data-uid="Sensing4USensor.Models.SensorData.ToString*"></a>
+
+  <h3 id="Sensing4USensor_Models_SensorData_ToString" data-uid="Sensing4USensor.Models.SensorData.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the SensorData instance into a formatted string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Formatted sensor reading with category and timestamp.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Models/SensorData.cs/#L21" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

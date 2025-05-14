@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor.Utils
+  commentId: N:Sensing4USensor.Utils
+  id: Sensing4USensor.Utils
+  children:
+  - Sensing4USensor.Utils.SensorColorClassifier
+  - Sensing4USensor.Utils.SensorFileManager
+  langs:
+  - csharp
+  - vb
+  name: Sensing4USensor.Utils
+  nameWithType: Sensing4USensor.Utils
+  fullName: Sensing4USensor.Utils
+  type: Namespace
+  assemblies:
+  - Sensing4USensor
+references:
+- uid: Sensing4USensor.Utils.SensorColorClassifier
+  commentId: T:Sensing4USensor.Utils.SensorColorClassifier
+  href: Sensing4USensor.Utils.SensorColorClassifier.html
+  name: SensorColorClassifier
+  nameWithType: SensorColorClassifier
+  fullName: Sensing4USensor.Utils.SensorColorClassifier
+- uid: Sensing4USensor.Utils.SensorFileManager
+  commentId: T:Sensing4USensor.Utils.SensorFileManager
+  parent: Sensing4USensor.Utils
+  href: Sensing4USensor.Utils.SensorFileManager.html
+  name: SensorFileManager
+  nameWithType: SensorFileManager
+  fullName: Sensing4USensor.Utils.SensorFileManager
+- uid: Sensing4USensor.Utils
+  commentId: N:Sensing4USensor.Utils
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Utils
+  nameWithType: Sensing4USensor.Utils
+  fullName: Sensing4USensor.Utils
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Utils
+    name: Utils
+    href: Sensing4USensor.Utils.html

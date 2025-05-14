@@ -7,12 +7,22 @@ using Sensing4USensor.Models;
 
 namespace Sensing4USensor.Utils
 {
+    /// <summary>
+    /// Provides methods to read and write sensor data from binary and CSV files.
+    /// Implements the Singleton pattern for consistent file management.
+    /// </summary>
     public class SensorFileManager
     {
         private static SensorFileManager? _instance;
 
+        /// <summary>
+        /// Private constructor to enforce Singleton pattern.
+        /// </summary>
         private SensorFileManager() { }
 
+        /// <summary>
+        /// Singleton instance of the SensorFileManager.
+        /// </summary>
         public static SensorFileManager Instance
         {
             get
@@ -23,6 +33,11 @@ namespace Sensing4USensor.Utils
             }
         }
 
+        /// <summary>
+        /// Saves a 2D array of sensor data to a binary file.
+        /// </summary>
+        /// <param name="path">Path where the file will be saved.</param>
+        /// <param name="data">The 2D array of SensorData to write.</param>
         public void WriteBinary(string path, SensorData[,] data)
         {
             try
@@ -56,6 +71,11 @@ namespace Sensing4USensor.Utils
             }
         }
 
+        /// <summary>
+        /// Reads sensor data from a binary file created using Python-compatible format.
+        /// </summary>
+        /// <param name="path">Path of the binary file.</param>
+        /// <returns>List of SensorData objects or null if an error occurs.</returns>
         public List<SensorData>? ReadPythonDetailedBinary(string path)
         {
             if (!File.Exists(path)) return null;
@@ -92,6 +112,11 @@ namespace Sensing4USensor.Utils
             }
         }
 
+        /// <summary>
+        /// Reads sensor data from a CSV file with the format: Date,hour 0,...,hour 23.
+        /// </summary>
+        /// <param name="path">Path to the CSV file.</param>
+        /// <returns>List of SensorData or null if reading fails.</returns>
         public List<SensorData>? ReadGridCsv(string path)
         {
             if (!File.Exists(path)) return null;
@@ -132,6 +157,11 @@ namespace Sensing4USensor.Utils
             }
         }
 
+        /// <summary>
+        /// Converts a flat list of SensorData into a 2D array with one column.
+        /// </summary>
+        /// <param name="list">The list to convert.</param>
+        /// <returns>A 2D array of SensorData [n,1].</returns>
         public SensorData[,] To2DArray(List<SensorData> list)
         {
             var result = new SensorData[list.Count, 1];
@@ -142,6 +172,11 @@ namespace Sensing4USensor.Utils
             return result;
         }
 
+        /// <summary>
+        /// Converts a list of SensorData into a 2D array organized by [day, hour].
+        /// </summary>
+        /// <param name="data">Flat list of sensor data records.</param>
+        /// <returns>2D array of SensorData grouped by day and hour.</returns>
         public SensorData[,] ToDailyHourlyArray(List<SensorData> data)
         {
             var groupedByDate = new SortedDictionary<DateTime, SensorData[]>();

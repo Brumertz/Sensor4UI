@@ -1,0 +1,783 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sensing4USensor.Models.SensorData
+  commentId: T:Sensing4USensor.Models.SensorData
+  id: SensorData
+  parent: Sensing4USensor.Models
+  children:
+  - Sensing4USensor.Models.SensorData.#ctor
+  - Sensing4USensor.Models.SensorData.#ctor(System.Int32,System.String,System.DateTime,System.Double)
+  - Sensing4USensor.Models.SensorData.#ctor(System.String,System.DateTime,System.Double)
+  - Sensing4USensor.Models.SensorData.ColorCategory
+  - Sensing4USensor.Models.SensorData.Date
+  - Sensing4USensor.Models.SensorData.Hour
+  - Sensing4USensor.Models.SensorData.Id
+  - Sensing4USensor.Models.SensorData.SensorType
+  - Sensing4USensor.Models.SensorData.Timestamp
+  - Sensing4USensor.Models.SensorData.ToString
+  - Sensing4USensor.Models.SensorData.Value
+  langs:
+  - csharp
+  - vb
+  name: SensorData
+  nameWithType: SensorData
+  fullName: Sensing4USensor.Models.SensorData
+  type: Class
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: SensorData
+    path: ../Models/SensorData.cs
+    startLine: 20
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Represents a sensor reading including metadata like timestamp, value, and category.
+  example: []
+  syntax:
+    content: public class SensorData
+    content.vb: Public Class SensorData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Sensing4USensor.Models.SensorData.Id
+  commentId: P:Sensing4USensor.Models.SensorData.Id
+  id: Id
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SensorData.Id
+  fullName: Sensing4USensor.Models.SensorData.Id
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Id
+    path: ../Models/SensorData.cs
+    startLine: 23
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Unique identifier for the sensor reading.
+  example: []
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Sensing4USensor.Models.SensorData.Id*
+- uid: Sensing4USensor.Models.SensorData.SensorType
+  commentId: P:Sensing4USensor.Models.SensorData.SensorType
+  id: SensorType
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: SensorType
+  nameWithType: SensorData.SensorType
+  fullName: Sensing4USensor.Models.SensorData.SensorType
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: SensorType
+    path: ../Models/SensorData.cs
+    startLine: 26
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Type or label of the sensor that generated the reading.
+  example: []
+  syntax:
+    content: public string SensorType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SensorType As String
+  overload: Sensing4USensor.Models.SensorData.SensorType*
+- uid: Sensing4USensor.Models.SensorData.Timestamp
+  commentId: P:Sensing4USensor.Models.SensorData.Timestamp
+  id: Timestamp
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: SensorData.Timestamp
+  fullName: Sensing4USensor.Models.SensorData.Timestamp
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Timestamp
+    path: ../Models/SensorData.cs
+    startLine: 29
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Date and time of the sensor reading.
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: Sensing4USensor.Models.SensorData.Timestamp*
+- uid: Sensing4USensor.Models.SensorData.Value
+  commentId: P:Sensing4USensor.Models.SensorData.Value
+  id: Value
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SensorData.Value
+  fullName: Sensing4USensor.Models.SensorData.Value
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Value
+    path: ../Models/SensorData.cs
+    startLine: 32
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Measured value from the sensor.
+  example: []
+  syntax:
+    content: public double Value { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Value As Double
+  overload: Sensing4USensor.Models.SensorData.Value*
+- uid: Sensing4USensor.Models.SensorData.ColorCategory
+  commentId: P:Sensing4USensor.Models.SensorData.ColorCategory
+  id: ColorCategory
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: ColorCategory
+  nameWithType: SensorData.ColorCategory
+  fullName: Sensing4USensor.Models.SensorData.ColorCategory
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ColorCategory
+    path: ../Models/SensorData.cs
+    startLine: 35
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Color category assigned based on the value range.
+  example: []
+  syntax:
+    content: public ColorCategory ColorCategory { get; set; }
+    parameters: []
+    return:
+      type: Sensing4USensor.Models.ColorCategory
+    content.vb: Public Property ColorCategory As ColorCategory
+  overload: Sensing4USensor.Models.SensorData.ColorCategory*
+- uid: Sensing4USensor.Models.SensorData.Date
+  commentId: P:Sensing4USensor.Models.SensorData.Date
+  id: Date
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: SensorData.Date
+  fullName: Sensing4USensor.Models.SensorData.Date
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Date
+    path: ../Models/SensorData.cs
+    startLine: 40
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Extracts the date portion of the timestamp (ignores time).
+  example: []
+  syntax:
+    content: public DateTime Date { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property [Date] As Date
+  overload: Sensing4USensor.Models.SensorData.Date*
+- uid: Sensing4USensor.Models.SensorData.Hour
+  commentId: P:Sensing4USensor.Models.SensorData.Hour
+  id: Hour
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: Hour
+  nameWithType: SensorData.Hour
+  fullName: Sensing4USensor.Models.SensorData.Hour
+  type: Property
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: Hour
+    path: ../Models/SensorData.cs
+    startLine: 45
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Extracts the hour portion of the timestamp.
+  example: []
+  syntax:
+    content: public int Hour { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Hour As Integer
+  overload: Sensing4USensor.Models.SensorData.Hour*
+- uid: Sensing4USensor.Models.SensorData.#ctor
+  commentId: M:Sensing4USensor.Models.SensorData.#ctor
+  id: '#ctor'
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: SensorData()
+  nameWithType: SensorData.SensorData()
+  fullName: Sensing4USensor.Models.SensorData.SensorData()
+  type: Constructor
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: .ctor
+    path: ../Models/SensorData.cs
+    startLine: 50
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Default constructor for fallback or placeholder data.
+  example: []
+  syntax:
+    content: public SensorData()
+    content.vb: Public Sub New()
+  overload: Sensing4USensor.Models.SensorData.#ctor*
+  nameWithType.vb: SensorData.New()
+  fullName.vb: Sensing4USensor.Models.SensorData.New()
+  name.vb: New()
+- uid: Sensing4USensor.Models.SensorData.#ctor(System.Int32,System.String,System.DateTime,System.Double)
+  commentId: M:Sensing4USensor.Models.SensorData.#ctor(System.Int32,System.String,System.DateTime,System.Double)
+  id: '#ctor(System.Int32,System.String,System.DateTime,System.Double)'
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: SensorData(int, string, DateTime, double)
+  nameWithType: SensorData.SensorData(int, string, DateTime, double)
+  fullName: Sensing4USensor.Models.SensorData.SensorData(int, string, System.DateTime, double)
+  type: Constructor
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: .ctor
+    path: ../Models/SensorData.cs
+    startLine: 66
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Creates a SensorData object with full properties.
+  example: []
+  syntax:
+    content: public SensorData(int id, string sensorType, DateTime timestamp, double value)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Sensor ID.
+    - id: sensorType
+      type: System.String
+      description: Sensor label or type.
+    - id: timestamp
+      type: System.DateTime
+      description: Timestamp of the reading.
+    - id: value
+      type: System.Double
+      description: Measured value.
+    content.vb: Public Sub New(id As Integer, sensorType As String, timestamp As Date, value As Double)
+  overload: Sensing4USensor.Models.SensorData.#ctor*
+  nameWithType.vb: SensorData.New(Integer, String, Date, Double)
+  fullName.vb: Sensing4USensor.Models.SensorData.New(Integer, String, Date, Double)
+  name.vb: New(Integer, String, Date, Double)
+- uid: Sensing4USensor.Models.SensorData.#ctor(System.String,System.DateTime,System.Double)
+  commentId: M:Sensing4USensor.Models.SensorData.#ctor(System.String,System.DateTime,System.Double)
+  id: '#ctor(System.String,System.DateTime,System.Double)'
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: SensorData(string, DateTime, double)
+  nameWithType: SensorData.SensorData(string, DateTime, double)
+  fullName: Sensing4USensor.Models.SensorData.SensorData(string, System.DateTime, double)
+  type: Constructor
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: .ctor
+    path: ../Models/SensorData.cs
+    startLine: 81
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Overload constructor with default ID.
+  example: []
+  syntax:
+    content: public SensorData(string sensorType, DateTime timestamp, double value)
+    parameters:
+    - id: sensorType
+      type: System.String
+      description: Sensor label or type.
+    - id: timestamp
+      type: System.DateTime
+      description: Timestamp of the reading.
+    - id: value
+      type: System.Double
+      description: Measured value.
+    content.vb: Public Sub New(sensorType As String, timestamp As Date, value As Double)
+  overload: Sensing4USensor.Models.SensorData.#ctor*
+  nameWithType.vb: SensorData.New(String, Date, Double)
+  fullName.vb: Sensing4USensor.Models.SensorData.New(String, Date, Double)
+  name.vb: New(String, Date, Double)
+- uid: Sensing4USensor.Models.SensorData.ToString
+  commentId: M:Sensing4USensor.Models.SensorData.ToString
+  id: ToString
+  parent: Sensing4USensor.Models.SensorData
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SensorData.ToString()
+  fullName: Sensing4USensor.Models.SensorData.ToString()
+  type: Method
+  source:
+    remote:
+      path: Sensing4USensor/Sensing4USensor/Models/SensorData.cs
+      branch: main
+      repo: https://github.com/Brumertz/Sensor4UI.git
+    id: ToString
+    path: ../Models/SensorData.cs
+    startLine: 90
+  assemblies:
+  - Sensing4USensor
+  namespace: Sensing4USensor.Models
+  summary: Converts the SensorData instance into a formatted string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: Formatted sensor reading with category and timestamp.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Sensing4USensor.Models.SensorData.ToString*
+references:
+- uid: Sensing4USensor.Models
+  commentId: N:Sensing4USensor.Models
+  href: Sensing4USensor.html
+  name: Sensing4USensor.Models
+  nameWithType: Sensing4USensor.Models
+  fullName: Sensing4USensor.Models
+  spec.csharp:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html
+  spec.vb:
+  - uid: Sensing4USensor
+    name: Sensing4USensor
+    href: Sensing4USensor.html
+  - name: .
+  - uid: Sensing4USensor.Models
+    name: Models
+    href: Sensing4USensor.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sensing4USensor.Models.SensorData.Id*
+  commentId: Overload:Sensing4USensor.Models.SensorData.Id
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_Id
+  name: Id
+  nameWithType: SensorData.Id
+  fullName: Sensing4USensor.Models.SensorData.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sensing4USensor.Models.SensorData.SensorType*
+  commentId: Overload:Sensing4USensor.Models.SensorData.SensorType
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_SensorType
+  name: SensorType
+  nameWithType: SensorData.SensorType
+  fullName: Sensing4USensor.Models.SensorData.SensorType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sensing4USensor.Models.SensorData.Timestamp*
+  commentId: Overload:Sensing4USensor.Models.SensorData.Timestamp
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_Timestamp
+  name: Timestamp
+  nameWithType: SensorData.Timestamp
+  fullName: Sensing4USensor.Models.SensorData.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Sensing4USensor.Models.SensorData.Value*
+  commentId: Overload:Sensing4USensor.Models.SensorData.Value
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_Value
+  name: Value
+  nameWithType: SensorData.Value
+  fullName: Sensing4USensor.Models.SensorData.Value
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Sensing4USensor.Models.SensorData.ColorCategory*
+  commentId: Overload:Sensing4USensor.Models.SensorData.ColorCategory
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_ColorCategory
+  name: ColorCategory
+  nameWithType: SensorData.ColorCategory
+  fullName: Sensing4USensor.Models.SensorData.ColorCategory
+- uid: Sensing4USensor.Models.ColorCategory
+  commentId: T:Sensing4USensor.Models.ColorCategory
+  parent: Sensing4USensor.Models
+  href: Sensing4USensor.Models.ColorCategory.html
+  name: ColorCategory
+  nameWithType: ColorCategory
+  fullName: Sensing4USensor.Models.ColorCategory
+- uid: Sensing4USensor.Models.SensorData.Date*
+  commentId: Overload:Sensing4USensor.Models.SensorData.Date
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_Date
+  name: Date
+  nameWithType: SensorData.Date
+  fullName: Sensing4USensor.Models.SensorData.Date
+- uid: Sensing4USensor.Models.SensorData.Hour*
+  commentId: Overload:Sensing4USensor.Models.SensorData.Hour
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_Hour
+  name: Hour
+  nameWithType: SensorData.Hour
+  fullName: Sensing4USensor.Models.SensorData.Hour
+- uid: Sensing4USensor.Models.SensorData.#ctor*
+  commentId: Overload:Sensing4USensor.Models.SensorData.#ctor
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData__ctor
+  name: SensorData
+  nameWithType: SensorData.SensorData
+  fullName: Sensing4USensor.Models.SensorData.SensorData
+  nameWithType.vb: SensorData.New
+  fullName.vb: Sensing4USensor.Models.SensorData.New
+  name.vb: New
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Sensing4USensor.Models.SensorData.ToString*
+  commentId: Overload:Sensing4USensor.Models.SensorData.ToString
+  href: Sensing4USensor.Models.SensorData.html#Sensing4USensor_Models_SensorData_ToString
+  name: ToString
+  nameWithType: SensorData.ToString
+  fullName: Sensing4USensor.Models.SensorData.ToString
