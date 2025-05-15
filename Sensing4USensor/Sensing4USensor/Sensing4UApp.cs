@@ -1,6 +1,11 @@
 ﻿using Sensing4USensor.Models;
 using Sensing4USensor.Utils;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Sensing4USensor
@@ -48,9 +53,33 @@ namespace Sensing4USensor
             pnlSensorButtons.FlowDirection = FlowDirection.TopDown;
             pnlSensorButtons.WrapContents = false;
             pnlSensorButtons.AutoScroll = true;
-
+            Trace.AutoFlush = true;
+            Trace.Listeners.Add(new ConsoleTraceListener());
             groupBox3.Controls.Clear();
             groupBox3.Controls.Add(pnlSensorButtons);
+        }
+
+        /// <summary>
+        /// Tests whether the singleton instance of SensorFileManager works correctly.
+        /// </summary>
+        private void TestSingletonInstance()
+        {
+            Trace.WriteLine("Entering TestSingletonInstance()");
+            var instance1 = SensorFileManager.Instance;
+            var instance2 = SensorFileManager.Instance;
+
+            if (ReferenceEquals(instance1, instance2))
+                MessageBox.Show("✅ Singleton test passed: Same instance returned.");
+            else
+                MessageBox.Show("❌ Singleton test failed: Different instances.");
+        }
+
+        /// <summary>
+        /// Handles form load event to perform singleton instance test.
+        /// </summary>
+        private void Sensing4UApp_Load(object sender, EventArgs e)
+        {
+            TestSingletonInstance();
         }
 
         /// <summary>
@@ -80,6 +109,7 @@ namespace Sensing4USensor
             this.upperBound = 0.0;
             txtLower.Text = "0.0";
             txtUpper.Text = "0.0";
+            Trace.WriteLine("Entering btnReset_Click()");
             UpdateGrid();
             MessageBox.Show("Range reset to 0.0 - 0.0");
         }
@@ -89,6 +119,7 @@ namespace Sensing4USensor
         /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Trace.WriteLine("Entering btnSave_Click()");
             if (string.IsNullOrWhiteSpace(txtNodeLabel.Text))
             {
                 MessageBox.Show("Please enter a label.");
@@ -126,6 +157,8 @@ namespace Sensing4USensor
         /// </summary>
         private void btnLoad_Click(object sender, EventArgs e)
         {
+
+            
             OpenFileDialog openFile = new OpenFileDialog
             {
                 Filter = "Supported Files (*.bin;*.csv)|*.bin;*.csv"
@@ -134,16 +167,22 @@ namespace Sensing4USensor
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 string ext = Path.GetExtension(openFile.FileName).ToLower();
-                List<SensorData>? rawList = null;
+                List<SensorData> rawList;
 
+                // Read the file into rawList using the proper overloads
                 if (ext == ".bin")
                     rawList = SensorFileManager.Instance.ReadPythonDetailedBinary(openFile.FileName);
                 else if (ext == ".csv")
                     rawList = SensorFileManager.Instance.ReadGridCsv(openFile.FileName);
+                else
+                    rawList = new List<SensorData>();
 
-                if (rawList != null && rawList.Count > 0)
+                Trace.WriteLine($"Loaded rawList with {rawList.Count} entries.");
+
+                if (rawList.Count > 0)
                 {
-                    var matrix = SensorFileManager.Instance.ToDailyHourlyArray(rawList);
+                    // Build your day/hour matrix
+                    var matrix = SensorFileManager.Instance.ToDailyHourlyArray(ref rawList);
                     datasets.Add(matrix);
 
                     string sensorName = Path.GetFileNameWithoutExtension(openFile.FileName);
@@ -172,13 +211,13 @@ namespace Sensing4USensor
                     groupBox4.Text = sensorName;
                     UpdateGrid();
                     UpdateAverage();
+
+                    MessageBox.Show("Dataset loaded successfully.");
                 }
                 else
                 {
                     MessageBox.Show("Failed to load data.");
                 }
-
-                MessageBox.Show("Dataset loaded successfully.");
             }
         }
 
@@ -187,19 +226,21 @@ namespace Sensing4USensor
         /// </summary>
         private void btnSaveToFile_Click(object sender, EventArgs e)
         {
+           
             if (datasets.Count == 0)
             {
                 MessageBox.Show("No data to save.");
                 return;
             }
 
-            SaveFileDialog saveFile = new SaveFileDialog
-            {
+            SaveFileDialog saveFile = new()
+            { 
                 Filter = "Binary Files (*.bin)|*.bin"
             };
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
+                Trace.WriteLine("Entering btnSaveToFile_Click()");
                 SensorFileManager.Instance.WriteBinary(saveFile.FileName, datasets[(int)currentIndex]);
                 MessageBox.Show("File saved successfully.");
             }
@@ -210,6 +251,8 @@ namespace Sensing4USensor
         /// </summary>
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Trace.WriteLine("Entering btnSearch_Click()");
+
             string search = txtSearch.Text.ToLower();
             if (string.IsNullOrWhiteSpace(search) || datasets.Count == 0)
                 return;
@@ -225,7 +268,7 @@ namespace Sensing4USensor
 
             for (int d = 0; d < days; d++)
             {
-                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewRow row = new();
                 row.CreateCells(dgvSensorData);
 
                 DateTime date = startDate.AddDays(d);
@@ -235,7 +278,7 @@ namespace Sensing4USensor
                 bool isMatch = dateString.ToLower().Contains(search) ||
                                date.ToString("yyyy-MM-dd").Contains(search) ||
                                date.ToString("d").ToLower().Contains(search);
-
+                Trace.WriteLine("Entering btnSearch_Click()");
                 for (int h = 0; h < hours; h++)
                 {
                     var item = current[d, h];
@@ -249,9 +292,7 @@ namespace Sensing4USensor
                 allRows.Add((date, row));
             }
 
-            var sortedRows = allRows.OrderBy(x => x.Item1).ToList();
-
-            foreach (var (date, row) in sortedRows)
+            foreach (var (date, row) in allRows.OrderBy(x => x.Item1))
                 dgvSensorData.Rows.Add(row);
 
             MessageBox.Show("Search completed. Highlighted matching rows.");
@@ -262,12 +303,28 @@ namespace Sensing4USensor
         /// </summary>
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Limpiar el DataGridView
             dgvSensorData.Rows.Clear();
             dgvSensorData.Columns.Clear();
 
+            // Limpiar los botones dinámicos
             pnlSensorButtons?.Controls.Clear();
 
-            MessageBox.Show("Interface cleared.");
+            // Limpiar cajas de texto
+            txtLower.Clear();
+            txtUpper.Clear();
+            txtSearch.Clear();
+            txtAverage.Clear();
+            txtNodeLabel.Clear();
+
+            // Limpiar datasets locales
+            datasets.Clear();
+            currentIndex = 0;
+
+            // Limpiar singleton si tiene caché
+            SensorFileManager.Instance.ClearData();
+
+            MessageBox.Show("Interface and cached data cleared.");
         }
 
         /// <summary>
@@ -295,7 +352,7 @@ namespace Sensing4USensor
             DateTime startDate = new DateTime(2025, 3, 12);
             for (int d = 0; d < days; d++)
             {
-                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewRow row = new();
                 row.CreateCells(dgvSensorData);
 
                 DateTime date = startDate.AddDays(d);
@@ -344,27 +401,6 @@ namespace Sensing4USensor
 
             txtAverage.Text = (count > 0 ? total / count : 0).ToString("F2");
         }
-
-        /// <summary>
-        /// Tests whether the singleton instance of SensorFileManager works correctly.
-        /// </summary>
-        private void TestSingletonInstance()
-        {
-            var instance1 = SensorFileManager.Instance;
-            var instance2 = SensorFileManager.Instance;
-
-            if (ReferenceEquals(instance1, instance2))
-                MessageBox.Show("✅ Singleton test passed: Same instance returned.");
-            else
-                MessageBox.Show("❌ Singleton test failed: Different instances.");
-        }
-
-        /// <summary>
-        /// Handles form load event to perform singleton instance test.
-        /// </summary>
-        private void Sensing4UApp_Load(object sender, EventArgs e)
-        {
-            TestSingletonInstance();
-        }
+        
     }
 }

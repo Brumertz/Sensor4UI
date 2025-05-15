@@ -24,10 +24,17 @@
   "Sensing4USensor.Utils.SensorColorClassifier": "Sensing4USensor.Utils.SensorColorClassifier.yml",
   "Sensing4USensor.Utils.SensorColorClassifier.GetColor(System.Double,System.Double,System.Double)": "Sensing4USensor.Utils.SensorColorClassifier.yml",
   "Sensing4USensor.Utils.SensorFileManager": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.SensorFileManager.ClearData": "Sensing4USensor.Utils.SensorFileManager.yml",
   "Sensing4USensor.Utils.SensorFileManager.Instance": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(System.String)": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(System.String)": "Sensing4USensor.Utils.SensorFileManager.yml",
   "Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)": "Sensing4USensor.Utils.SensorFileManager.yml",
   "Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)": "Sensing4USensor.Utils.SensorFileManager.yml",
-  "Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})": "Sensing4USensor.Utils.SensorFileManager.yml",
-  "Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})": "Sensing4USensor.Utils.SensorFileManager.yml",
-  "Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])": "Sensing4USensor.Utils.SensorFileManager.yml"
+  "Sensing4USensor.Utils.SensorFileManager.SensorData": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData}@)": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])": "Sensing4USensor.Utils.SensorFileManager.yml",
+  "Sensing4USensor.Utils.TextBoxTraceListener": "Sensing4USensor.Utils.TextBoxTraceListener.yml",
+  "Sensing4USensor.Utils.TextBoxTraceListener.#ctor(System.Windows.Forms.TextBox)": "Sensing4USensor.Utils.TextBoxTraceListener.yml",
+  "Sensing4USensor.Utils.TextBoxTraceListener.Write(System.String)": "Sensing4USensor.Utils.TextBoxTraceListener.yml",
+  "Sensing4USensor.Utils.TextBoxTraceListener.WriteLine(System.String)": "Sensing4USensor.Utils.TextBoxTraceListener.yml"
 }

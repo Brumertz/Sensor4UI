@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class SensorFileManager | Sensing4U ">
       
-      <meta name="description" content="Provides methods to read and write sensor data from binary and CSV files. Implements the Singleton pattern for consistent file management.">
+      <meta name="description" content="Singleton class responsible for reading and writing sensor data, and managing a shared list of sensor records across the application.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Sensing4USensor_Utils_SensorFileManager" data-uid="Sensing4USensor.Utils.SensorFileManager" class="text-break">
-Class SensorFileManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class SensorFileManager  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,8 +97,8 @@ Class SensorFileManager  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>Sensing4USensor.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides methods to read and write sensor data from binary and CSV files.
-Implements the Singleton pattern for consistent file management.</p>
+  <div class="markdown summary"><p>Singleton class responsible for reading and writing sensor data,
+and managing a shared list of sensor records across the application.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -158,10 +158,10 @@ Implements the Singleton pattern for consistent file management.</p>
 
   <h3 id="Sensing4USensor_Utils_SensorFileManager_Instance" data-uid="Sensing4USensor.Utils.SensorFileManager.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Singleton instance of the SensorFileManager.</p>
+  <div class="markdown level1 summary"><p>Provides access to the singleton instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -186,37 +186,158 @@ Implements the Singleton pattern for consistent file management.</p>
 
 
 
+  <a id="Sensing4USensor_Utils_SensorFileManager_SensorData_" data-uid="Sensing4USensor.Utils.SensorFileManager.SensorData*"></a>
+
+  <h3 id="Sensing4USensor_Utils_SensorFileManager_SensorData" data-uid="Sensing4USensor.Utils.SensorFileManager.SensorData">
+  SensorData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the shared list of sensor data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;SensorData&gt; SensorData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="Sensing4USensor_Utils_SensorFileManager_ClearData_" data-uid="Sensing4USensor.Utils.SensorFileManager.ClearData*"></a>
+
+  <h3 id="Sensing4USensor_Utils_SensorFileManager_ClearData" data-uid="Sensing4USensor.Utils.SensorFileManager.ClearData">
+  ClearData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all sensor data stored in the singleton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Utils_SensorFileManager_LoadFromBinary_" data-uid="Sensing4USensor.Utils.SensorFileManager.LoadFromBinary*"></a>
+
+  <h3 id="Sensing4USensor_Utils_SensorFileManager_LoadFromBinary_System_String_" data-uid="Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(System.String)">
+  LoadFromBinary(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads sensor data from a binary file into the shared list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadFromBinary(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Sensing4USensor_Utils_SensorFileManager_LoadFromCsv_" data-uid="Sensing4USensor.Utils.SensorFileManager.LoadFromCsv*"></a>
+
+  <h3 id="Sensing4USensor_Utils_SensorFileManager_LoadFromCsv_System_String_" data-uid="Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(System.String)">
+  LoadFromCsv(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads sensor data from a CSV file with hourly columns into the shared list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadFromCsv(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="Sensing4USensor_Utils_SensorFileManager_ReadGridCsv_" data-uid="Sensing4USensor.Utils.SensorFileManager.ReadGridCsv*"></a>
 
   <h3 id="Sensing4USensor_Utils_SensorFileManager_ReadGridCsv_System_String_" data-uid="Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)">
   ReadGridCsv(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reads sensor data from a CSV file with the format: Date,hour 0,...,hour 23.</p>
+  <div class="markdown level1 summary"><p>Reads a grid CSV file and returns the flat list of SensorData.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;SensorData&gt;? ReadGridCsv(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;SensorData&gt; ReadGridCsv(string path)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Path to the CSV file.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>&gt;</dt>
-    <dd><p>List of SensorData or null if reading fails.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -233,68 +354,27 @@ Implements the Singleton pattern for consistent file management.</p>
 
   <h3 id="Sensing4USensor_Utils_SensorFileManager_ReadPythonDetailedBinary_System_String_" data-uid="Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)">
   ReadPythonDetailedBinary(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reads sensor data from a binary file created using Python-compatible format.</p>
+  <div class="markdown level1 summary"><p>Reads a Python-style detailed binary file and returns the list of SensorData.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;SensorData&gt;? ReadPythonDetailedBinary(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;SensorData&gt; ReadPythonDetailedBinary(string path)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Path of the binary file.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>&gt;</dt>
-    <dd><p>List of SensorData objects or null if an error occurs.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Sensing4USensor_Utils_SensorFileManager_To2DArray_" data-uid="Sensing4USensor.Utils.SensorFileManager.To2DArray*"></a>
-
-  <h3 id="Sensing4USensor_Utils_SensorFileManager_To2DArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__" data-uid="Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
-  To2DArray(List&lt;SensorData&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L165"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a flat list of SensorData into a 2D array with one column.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SensorData[,] To2DArray(List&lt;SensorData&gt; list)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>list</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>&gt;</dt>
-    <dd><p>The list to convert.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>[,]</dt>
-    <dd><p>A 2D array of SensorData [n,1].</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -309,31 +389,29 @@ Implements the Singleton pattern for consistent file management.</p>
 
   <a id="Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_" data-uid="Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray*"></a>
 
-  <h3 id="Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__" data-uid="Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
-  ToDailyHourlyArray(List&lt;SensorData&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData___" data-uid="Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData}@)">
+  ToDailyHourlyArray(ref List&lt;SensorData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converts a list of SensorData into a 2D array organized by [day, hour].</p>
+  <div class="markdown level1 summary"><p>Converts a list of SensorData into a 2D array [day, hour].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SensorData[,] ToDailyHourlyArray(List&lt;SensorData&gt; data)</code></pre>
+    <pre><code class="lang-csharp hljs">public SensorData[,] ToDailyHourlyArray(ref List&lt;SensorData&gt; data)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>&gt;</dt>
-    <dd><p>Flat list of sensor data records.</p>
-</dd>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>[,]</dt>
-    <dd><p>2D array of SensorData grouped by day and hour.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
@@ -350,25 +428,23 @@ Implements the Singleton pattern for consistent file management.</p>
 
   <h3 id="Sensing4USensor_Utils_SensorFileManager_WriteBinary_System_String_Sensing4USensor_Models_SensorData_0__0___" data-uid="Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])">
   WriteBinary(string, SensorData[,])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Saves a 2D array of sensor data to a binary file.</p>
+  <div class="markdown level1 summary"><p>Saves the provided 2D array of SensorData to a binary file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void WriteBinary(string path, SensorData[,] data)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WriteBinary(string path, SensorData[,] sensorArray)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Path where the file will be saved.</p>
-</dd>
-    <dt><code>data</code> <a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>[,]</dt>
-    <dd><p>The 2D array of SensorData to write.</p>
-</dd>
+    <dd></dd>
+    <dt><code>sensorArray</code> <a class="xref" href="Sensing4USensor.Models.SensorData.html">SensorData</a>[,]</dt>
+    <dd></dd>
   </dl>
 
 
@@ -386,7 +462,7 @@ Implements the Singleton pattern for consistent file management.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Brumertz/Sensor4UI/blob/main/Sensing4USensor/Sensing4USensor/Utils/SensorFileManager.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

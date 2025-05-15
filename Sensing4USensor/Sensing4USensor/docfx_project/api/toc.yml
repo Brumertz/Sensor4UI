@@ -27,4 +27,7 @@ items:
   - uid: Sensing4USensor.Utils.SensorFileManager
     name: SensorFileManager
     type: Class
+  - uid: Sensing4USensor.Utils.TextBoxTraceListener
+    name: TextBoxTraceListener
+    type: Class
 memberLayout: SamePage

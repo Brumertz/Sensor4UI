@@ -117,6 +117,16 @@
             Initializes the application and UI components.
             </summary>
         </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.TestSingletonInstance">
+            <summary>
+            Tests whether the singleton instance of SensorFileManager works correctly.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Sensing4UApp.Sensing4UApp_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles form load event to perform singleton instance test.
+            </summary>
+        </member>
         <member name="M:Sensing4USensor.Sensing4UApp.btnSetRange_Click(System.Object,System.EventArgs)">
             <summary>
             Event handler to set the filtering range from input fields.
@@ -162,16 +172,6 @@
             Calculates and displays the average sensor value of the current dataset.
             </summary>
         </member>
-        <member name="M:Sensing4USensor.Sensing4UApp.TestSingletonInstance">
-            <summary>
-            Tests whether the singleton instance of SensorFileManager works correctly.
-            </summary>
-        </member>
-        <member name="M:Sensing4USensor.Sensing4UApp.Sensing4UApp_Load(System.Object,System.EventArgs)">
-            <summary>
-            Handles form load event to perform singleton instance test.
-            </summary>
-        </member>
         <member name="F:Sensing4USensor.Sensing4UApp.components">
             <summary>
              Required designer variable.
@@ -205,54 +205,54 @@
         </member>
         <member name="T:Sensing4USensor.Utils.SensorFileManager">
             <summary>
-            Provides methods to read and write sensor data from binary and CSV files.
-            Implements the Singleton pattern for consistent file management.
-            </summary>
-        </member>
-        <member name="M:Sensing4USensor.Utils.SensorFileManager.#ctor">
-            <summary>
-            Private constructor to enforce Singleton pattern.
+            Singleton class responsible for reading and writing sensor data,
+            and managing a shared list of sensor records across the application.
             </summary>
         </member>
         <member name="P:Sensing4USensor.Utils.SensorFileManager.Instance">
             <summary>
-            Singleton instance of the SensorFileManager.
+            Provides access to the singleton instance.
+            </summary>
+        </member>
+        <member name="P:Sensing4USensor.Utils.SensorFileManager.SensorData">
+            <summary>
+            Returns the shared list of sensor data.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ClearData">
+            <summary>
+            Clears all sensor data stored in the singleton.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData}@)">
+            <summary>
+            Converts a list of SensorData into a 2D array [day, hour].
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(System.String)">
+            <summary>
+            Loads sensor data from a binary file into the shared list.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)">
+            <summary>
+            Reads a Python-style detailed binary file and returns the list of SensorData.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(System.String)">
+            <summary>
+            Loads sensor data from a CSV file with hourly columns into the shared list.
+            </summary>
+        </member>
+        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)">
+            <summary>
+            Reads a grid CSV file and returns the flat list of SensorData.
             </summary>
         </member>
         <member name="M:Sensing4USensor.Utils.SensorFileManager.WriteBinary(System.String,Sensing4USensor.Models.SensorData[0:,0:])">
             <summary>
-            Saves a 2D array of sensor data to a binary file.
+            Saves the provided 2D array of SensorData to a binary file.
             </summary>
-            <param name="path">Path where the file will be saved.</param>
-            <param name="data">The 2D array of SensorData to write.</param>
-        </member>
-        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary(System.String)">
-            <summary>
-            Reads sensor data from a binary file created using Python-compatible format.
-            </summary>
-            <param name="path">Path of the binary file.</param>
-            <returns>List of SensorData objects or null if an error occurs.</returns>
-        </member>
-        <member name="M:Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)">
-            <summary>
-            Reads sensor data from a CSV file with the format: Date,hour 0,...,hour 23.
-            </summary>
-            <param name="path">Path to the CSV file.</param>
-            <returns>List of SensorData or null if reading fails.</returns>
-        </member>
-        <member name="M:Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
-            <summary>
-            Converts a flat list of SensorData into a 2D array with one column.
-            </summary>
-            <param name="list">The list to convert.</param>
-            <returns>A 2D array of SensorData [n,1].</returns>
-        </member>
-        <member name="M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})">
-            <summary>
-            Converts a list of SensorData into a 2D array organized by [day, hour].
-            </summary>
-            <param name="data">Flat list of sensor data records.</param>
-            <returns>2D array of SensorData grouped by day and hour.</returns>
         </member>
         <member name="T:Sensing4USensor.ApplicationConfiguration">
             <summary>

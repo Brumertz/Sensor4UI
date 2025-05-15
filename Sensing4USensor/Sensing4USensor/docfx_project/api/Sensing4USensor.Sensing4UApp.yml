@@ -602,7 +602,7 @@ items:
       repo: https://github.com/Brumertz/Sensor4UI.git
     id: .ctor
     path: ../Sensing4UApp.cs
-    startLine: 41
+    startLine: 46
   assemblies:
   - Sensing4USensor
   namespace: Sensing4USensor

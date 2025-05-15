@@ -259,6 +259,19 @@ references:
   commentId: T:Sensing4USensor.Utils.SensorFileManager
   fullName: Sensing4USensor.Utils.SensorFileManager
   nameWithType: SensorFileManager
+- uid: Sensing4USensor.Utils.SensorFileManager.ClearData
+  name: ClearData()
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ClearData
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.ClearData
+  fullName: Sensing4USensor.Utils.SensorFileManager.ClearData()
+  nameWithType: SensorFileManager.ClearData()
+- uid: Sensing4USensor.Utils.SensorFileManager.ClearData*
+  name: ClearData
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ClearData_
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.ClearData
+  isSpec: "True"
+  fullName: Sensing4USensor.Utils.SensorFileManager.ClearData
+  nameWithType: SensorFileManager.ClearData
 - uid: Sensing4USensor.Utils.SensorFileManager.Instance
   name: Instance
   href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_Instance
@@ -272,6 +285,38 @@ references:
   isSpec: "True"
   fullName: Sensing4USensor.Utils.SensorFileManager.Instance
   nameWithType: SensorFileManager.Instance
+- uid: Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(System.String)
+  name: LoadFromBinary(string)
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_LoadFromBinary_System_String_
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(System.String)
+  name.vb: LoadFromBinary(String)
+  fullName: Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(string)
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.LoadFromBinary(String)
+  nameWithType: SensorFileManager.LoadFromBinary(string)
+  nameWithType.vb: SensorFileManager.LoadFromBinary(String)
+- uid: Sensing4USensor.Utils.SensorFileManager.LoadFromBinary*
+  name: LoadFromBinary
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_LoadFromBinary_
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.LoadFromBinary
+  isSpec: "True"
+  fullName: Sensing4USensor.Utils.SensorFileManager.LoadFromBinary
+  nameWithType: SensorFileManager.LoadFromBinary
+- uid: Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(System.String)
+  name: LoadFromCsv(string)
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_LoadFromCsv_System_String_
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(System.String)
+  name.vb: LoadFromCsv(String)
+  fullName: Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(string)
+  fullName.vb: Sensing4USensor.Utils.SensorFileManager.LoadFromCsv(String)
+  nameWithType: SensorFileManager.LoadFromCsv(string)
+  nameWithType.vb: SensorFileManager.LoadFromCsv(String)
+- uid: Sensing4USensor.Utils.SensorFileManager.LoadFromCsv*
+  name: LoadFromCsv
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_LoadFromCsv_
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.LoadFromCsv
+  isSpec: "True"
+  fullName: Sensing4USensor.Utils.SensorFileManager.LoadFromCsv
+  nameWithType: SensorFileManager.LoadFromCsv
 - uid: Sensing4USensor.Utils.SensorFileManager.ReadGridCsv(System.String)
   name: ReadGridCsv(string)
   href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ReadGridCsv_System_String_
@@ -304,30 +349,27 @@ references:
   isSpec: "True"
   fullName: Sensing4USensor.Utils.SensorFileManager.ReadPythonDetailedBinary
   nameWithType: SensorFileManager.ReadPythonDetailedBinary
-- uid: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
-  name: To2DArray(List<SensorData>)
-  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_To2DArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__
-  commentId: M:Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
-  name.vb: To2DArray(List(Of SensorData))
-  fullName: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List<Sensing4USensor.Models.SensorData>)
-  fullName.vb: Sensing4USensor.Utils.SensorFileManager.To2DArray(System.Collections.Generic.List(Of Sensing4USensor.Models.SensorData))
-  nameWithType: SensorFileManager.To2DArray(List<SensorData>)
-  nameWithType.vb: SensorFileManager.To2DArray(List(Of SensorData))
-- uid: Sensing4USensor.Utils.SensorFileManager.To2DArray*
-  name: To2DArray
-  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_To2DArray_
-  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.To2DArray
+- uid: Sensing4USensor.Utils.SensorFileManager.SensorData
+  name: SensorData
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_SensorData
+  commentId: P:Sensing4USensor.Utils.SensorFileManager.SensorData
+  fullName: Sensing4USensor.Utils.SensorFileManager.SensorData
+  nameWithType: SensorFileManager.SensorData
+- uid: Sensing4USensor.Utils.SensorFileManager.SensorData*
+  name: SensorData
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_SensorData_
+  commentId: Overload:Sensing4USensor.Utils.SensorFileManager.SensorData
   isSpec: "True"
-  fullName: Sensing4USensor.Utils.SensorFileManager.To2DArray
-  nameWithType: SensorFileManager.To2DArray
-- uid: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
-  name: ToDailyHourlyArray(List<SensorData>)
-  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData__
-  commentId: M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData})
+  fullName: Sensing4USensor.Utils.SensorFileManager.SensorData
+  nameWithType: SensorFileManager.SensorData
+- uid: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData}@)
+  name: ToDailyHourlyArray(ref List<SensorData>)
+  href: api/Sensing4USensor.Utils.SensorFileManager.html#Sensing4USensor_Utils_SensorFileManager_ToDailyHourlyArray_System_Collections_Generic_List_Sensing4USensor_Models_SensorData___
+  commentId: M:Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List{Sensing4USensor.Models.SensorData}@)
   name.vb: ToDailyHourlyArray(List(Of SensorData))
-  fullName: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List<Sensing4USensor.Models.SensorData>)
+  fullName: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(ref System.Collections.Generic.List<Sensing4USensor.Models.SensorData>)
   fullName.vb: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray(System.Collections.Generic.List(Of Sensing4USensor.Models.SensorData))
-  nameWithType: SensorFileManager.ToDailyHourlyArray(List<SensorData>)
+  nameWithType: SensorFileManager.ToDailyHourlyArray(ref List<SensorData>)
   nameWithType.vb: SensorFileManager.ToDailyHourlyArray(List(Of SensorData))
 - uid: Sensing4USensor.Utils.SensorFileManager.ToDailyHourlyArray*
   name: ToDailyHourlyArray
@@ -352,3 +394,60 @@ references:
   isSpec: "True"
   fullName: Sensing4USensor.Utils.SensorFileManager.WriteBinary
   nameWithType: SensorFileManager.WriteBinary
+- uid: Sensing4USensor.Utils.TextBoxTraceListener
+  name: TextBoxTraceListener
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html
+  commentId: T:Sensing4USensor.Utils.TextBoxTraceListener
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener
+  nameWithType: TextBoxTraceListener
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.#ctor(System.Windows.Forms.TextBox)
+  name: TextBoxTraceListener(TextBox)
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener__ctor_System_Windows_Forms_TextBox_
+  commentId: M:Sensing4USensor.Utils.TextBoxTraceListener.#ctor(System.Windows.Forms.TextBox)
+  name.vb: New(TextBox)
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.TextBoxTraceListener(System.Windows.Forms.TextBox)
+  fullName.vb: Sensing4USensor.Utils.TextBoxTraceListener.New(System.Windows.Forms.TextBox)
+  nameWithType: TextBoxTraceListener.TextBoxTraceListener(TextBox)
+  nameWithType.vb: TextBoxTraceListener.New(TextBox)
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.#ctor*
+  name: TextBoxTraceListener
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener__ctor_
+  commentId: Overload:Sensing4USensor.Utils.TextBoxTraceListener.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.TextBoxTraceListener
+  fullName.vb: Sensing4USensor.Utils.TextBoxTraceListener.New
+  nameWithType: TextBoxTraceListener.TextBoxTraceListener
+  nameWithType.vb: TextBoxTraceListener.New
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.Write(System.String)
+  name: Write(string)
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener_Write_System_String_
+  commentId: M:Sensing4USensor.Utils.TextBoxTraceListener.Write(System.String)
+  name.vb: Write(String)
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.Write(string)
+  fullName.vb: Sensing4USensor.Utils.TextBoxTraceListener.Write(String)
+  nameWithType: TextBoxTraceListener.Write(string)
+  nameWithType.vb: TextBoxTraceListener.Write(String)
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.Write*
+  name: Write
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener_Write_
+  commentId: Overload:Sensing4USensor.Utils.TextBoxTraceListener.Write
+  isSpec: "True"
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.Write
+  nameWithType: TextBoxTraceListener.Write
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.WriteLine(System.String)
+  name: WriteLine(string)
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener_WriteLine_System_String_
+  commentId: M:Sensing4USensor.Utils.TextBoxTraceListener.WriteLine(System.String)
+  name.vb: WriteLine(String)
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.WriteLine(string)
+  fullName.vb: Sensing4USensor.Utils.TextBoxTraceListener.WriteLine(String)
+  nameWithType: TextBoxTraceListener.WriteLine(string)
+  nameWithType.vb: TextBoxTraceListener.WriteLine(String)
+- uid: Sensing4USensor.Utils.TextBoxTraceListener.WriteLine*
+  name: WriteLine
+  href: api/Sensing4USensor.Utils.TextBoxTraceListener.html#Sensing4USensor_Utils_TextBoxTraceListener_WriteLine_
+  commentId: Overload:Sensing4USensor.Utils.TextBoxTraceListener.WriteLine
+  isSpec: "True"
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener.WriteLine
+  nameWithType: TextBoxTraceListener.WriteLine

@@ -6,6 +6,7 @@ items:
   children:
   - Sensing4USensor.Utils.SensorColorClassifier
   - Sensing4USensor.Utils.SensorFileManager
+  - Sensing4USensor.Utils.TextBoxTraceListener
   langs:
   - csharp
   - vb
@@ -29,6 +30,12 @@ references:
   name: SensorFileManager
   nameWithType: SensorFileManager
   fullName: Sensing4USensor.Utils.SensorFileManager
+- uid: Sensing4USensor.Utils.TextBoxTraceListener
+  commentId: T:Sensing4USensor.Utils.TextBoxTraceListener
+  href: Sensing4USensor.Utils.TextBoxTraceListener.html
+  name: TextBoxTraceListener
+  nameWithType: TextBoxTraceListener
+  fullName: Sensing4USensor.Utils.TextBoxTraceListener
 - uid: Sensing4USensor.Utils
   commentId: N:Sensing4USensor.Utils
   href: Sensing4USensor.html
